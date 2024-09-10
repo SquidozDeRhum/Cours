@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 	<head>
 		<meta charset="utf-8">
+		<meta name="description" content="Présentation des plus grands vins de Touraine ainsi que de leurs terroirs">
+		<meta name="keyword" content="vins, wines, vin, wine, terroirs, présentation, presentation, classement, ranking, localisation, brut, raw, demi-sec, semi-dry">
 		<title>Les vins de Touraine</title>
 	</head>
 	<body>
@@ -14,9 +16,15 @@
 		</dl>
 		<h2>Localisation des vins de Touraine</h2>
 		<figure>
-			<img src="images/cartetouraine.jpg" alt="Cartes des vins de Touraine" title="Cartes des vins de Touraine">
+			<img src="images/cartes/cartetouraine.jpg" alt="Cartes des vins de Touraine" title="Cartes des vins de Touraine" usemap="#image-map">
 			<figcaption>Cartes des vins de Touraine</figcaption>
 		</figure>
+
+		<map name="image-map">
+			<area target="" alt="Chinon" title="Chinon" href="#chinon" coords="228,80,269,102" shape="rect">
+			<area target="" alt="Bourgueil" title="Bourgueil" href="#bourgueil" coords="211,55,210,87,226,88,227,77,249,78,249,56" shape="poly">
+			<area target="" alt="Vouvray" title="Vouvray" href="#vouvray" coords="286,58,17" shape="circle">
+		</map>
 		<ul>
 			<nav>
 				<li><a href="#bourgueil">Bourgueil</a></li>
@@ -40,7 +48,7 @@
 			<p>
 				L'aire d'appellation s'étend sur <strong>7 communes</strong>. A cet endroit, la vallée de la Loire est composée de sols variés, depuis les alluvions près du fleuve jusqu'aux sols argilo-calcaires proches de la côte de <a href="#tuffeau">tuffeau</a>.
 			</p>
-			<img alt="Carte superficie" title="Superficie" src="images/cartebourgueil.jpg">
+			<img alt="Carte superficie" title="Superficie" src="images/cartes/cartebourgueil.jpg">
 			<h4>Superficie : 1 400 ha</h4>
 		</article>
 		<article>
@@ -52,7 +60,7 @@
 			<p>
 				L'aire d'appellation s'étend sur <strong>19 communes</strong>, de part et d'autre de la Vienne jusqu'à sa confluence avec la Loire. 
 			</p>
-			<img src="images/cartechinon.jpg" alt="">
+			<img src="images/cartes/cartechinon.jpg" alt="">
 			<h4>Superficie : 2 300 ha </h4>
 		</article>
 		<article>
@@ -64,7 +72,7 @@
 			<p>
 				L'aire d'appellation s'ouvre aux limites Est de l'agglomération tourangelle et s'étend sur <strong>7 communes</strong> de la rive droite de la Loire et en bordure de son affluent, la Brenne. 
 			</p>
-			<img src="images/cartevouvray.jpg" alt="">
+			<img src="images/cartes/cartevouvray.jpg" alt="">
 			<h4>Superficie : 2 000 ha </h4>
 		</article>
 		<article>
@@ -80,6 +88,9 @@
 			<h3>Classement des vins </h3>
 			<table>
 				<caption>Millésimes des vins de Touraine</caption>
+				<tr>
+					<th colspan="6">Années</th>
+				</tr>
 				<tr>
 					<th></th>
 					<th>2012</th>
@@ -101,6 +112,26 @@
 					<td>15</td>
 					<td>15</td>
 				</tr>
+				<tr>
+					<th>Qualité</th>
+					<th style="width: 34px;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 30%;">
+					</th>
+					<th style="width: 34px;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 40%;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 40%;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 40%;">
+					</th>
+					<th style="width: 34px;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 40%;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 40%;">
+					</th>
+					<th style="width: 34px;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 40%;">
+						<img alt="Nombre d'étoiles du vin" tittle="star" src="images/star.png" style="width: 40%;">
+					</th>
+				</tr>
+				
 			</table>
 		</article>
 		<video src="videos/vendanges.mp4"></video>
@@ -109,7 +140,7 @@
 		<h3>Liens </h3>
 		<nav>
 			<a href="vins_nantais.html">Les vins du Pays Nantais - </a>
-			<a href="vins_danjou_saumur.html">Les vins d'Anjou-Saumur - </a>
+			<a href="vin_anjou_saumur.html">Les vins d'Anjou-Saumur - </a>
 			<a href="vins_centre.html">Les vins du Centre </a>
 		</nav>
 		<a href="#haut">
@@ -122,6 +153,7 @@
 		<p>Pour contacter le webmaster : </p>
 		<a href="mailto:james.bond@scotl-yard.uk">james.bond@scotl-yard.uk</a>
 		<p> Page sponsorisée par <a href="https://sycraxe.dev">Les vins Nicolas</a> </p>
+		<audio src="sons/son.mp3" controls="controls"></audio>
 	</footer>
 	</body>
 </html> 
