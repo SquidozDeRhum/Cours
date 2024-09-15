@@ -66,10 +66,10 @@ debut
     ecrire("La moyenne de ", nom, " est de : ", moyenne)
 fin
 
-//Exercice 6
+//Exercice 6 avec alternative
 programme Permis
 debut
-    booléen : code, accompagnee,resultat;
+    booléen : code, accompagnee, resultat;
     entier : age, heures;
     ecrire("Avez-vous le code ? ("vrai/faux") : ");
     code := lire();
@@ -79,16 +79,33 @@ debut
     heures := lire();
     ecrire("Avez-vous fait de la conduite accompagnée ? : ");
     accompagnee := lire();
-    si accompagnee = faux:
-    alors
-        si heures > 25 et age > 18 et code = vrai:
-            alors resultat := vrai 
+    si accompagnee = faux alors
+        si heures > 25 et age > 18 et code = vrai alors 
+            resultat := vrai 
             sinon resulat := faux
     sinon
         booléen : an;
         ecrire("Avez-vous fait un an de conduite accompagnée ? : ");
         an := lire();
-        si heures > 20 et age > 18 et code = vrai et an = vrai:
-            alors resultat := vrai 
+        si heures > 20 et age > 18 et code = vrai et an = vrai alors 
+            resultat := vrai 
             sinon resulat := faux
     ecrire("Possibilité de passer le permis : ", resultat);
+fin
+
+//Exercice 6 sans alternatives
+programme Permis
+debut
+    booléen : code, accompagnee, resultat;
+    entier : age, heures;
+    ecrire("Avez-vous le code ? ("vrai/faux") : ");
+    code := lire();
+    ecrire("Veuillez entrer votre âge : ");
+    age := lire();
+    ecrire("Veuillez entrer votre nombre d'heures de conduite : ");
+    heures := lire();
+    ecrire("Avez-vous fait de la conduite accompagnée ? : ");
+    accompagnee := lire();
+    resultat := (age > 18 et code = vrai et ((heures > 25) ou (heures > 20 et accompagnee)));
+    ecrire("Possibilité de passer le permis : ", resultat);
+fin

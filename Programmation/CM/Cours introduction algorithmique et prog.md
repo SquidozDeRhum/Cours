@@ -200,6 +200,10 @@ int main(){
 }
 ```
 
+> [!NOTE]
+>
+> Fonction 'fgets(variable, taille, stdin);' en cas de problèmes avec scanf
+
 **Formateurs :**
 
 - %d : entier
@@ -208,3 +212,81 @@ int main(){
 - %s : string
 - %p : adresse mémoire
 
+**Les alternatives en C **: 
+
+Pour utiliser les booléens en C : 'stdbool.h', en général on utilise juste des entiers
+
+Opérateurs booléen :
+
+- Et : &&
+- Ou : ||
+- Ou exclusif : ^
+- Non : !
+- Egalité : ==
+- inégalité : <=, >= <, >
+- différence !=
+
+Exemple d'alternatives en C : 
+
+```c
+if (condition) {
+    //instructions
+}
+else {
+    //instructions
+}
+else if {
+    //instructions
+}
+```
+
+Il est possible d'imbriquer les alternatives.
+
+**Choix multiples (switch)** :
+
+```c
+switch(variable){
+    case constante1:
+        //intructions
+        break;
+    case constante2:
+        //instructions
+        break;
+    case constanten:
+        //instructions
+        break;
+    default:
+        //instructions
+        //Pas de break
+}
+```
+
+> [!IMPORTANT]
+>
+> La variable ne peut être que de type discret (int, char, ...)
+
+**Les boucles en C** :
+
+```c
+int demo = 1;
+//Boucle while
+
+while (demo<10) {
+    demo++;
+}
+
+//Boucle do while
+
+do{
+    demo++;
+}while(demo < 20);
+
+//Boucle For
+
+for (int feur = 0; feur < 20; feur++) {
+    //Instructions
+}
+```
+
+- 'feur++' correspond à de la post-incrémentation
+- '++feur' correspond à de la pré-incrémentation

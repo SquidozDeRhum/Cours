@@ -177,7 +177,7 @@ blockquote {
 ul {
     list-style-position: inside;
     list-style: disc;
-    list-style-image: url("images/icone_grappe_rouge.gif");
+    list-style-image: url("images/icone_grappe_blanc.gif");
     text-transform: lowercase;
 }
 
@@ -202,38 +202,58 @@ a, a:visited {
 /* taille de la police de 1,2 em */
 /* interligne de 1,5 em */
 
-
+li > a {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
 
 /* Définition paragraphe "appellation" */
 /* texte centré */
 /* taille de la police 0,9 em */
 
-
+.appelation {
+    text-align: center;
+    font-size: 0.9em;
+}
 
 /* Définition paragraphe "localisation" */
 /* alinéa de 30 pixels */
 /* texte justifié */
 /* espacement des mots : -2 pixels */
 	
-
+.localisation {
+    text-indent: 30px;
+    text-align: justify;
+    word-spacing: -2px;
+}
 
 /* Définition mots présents dans le texte de la page pour lesquels une définition existe dans le glossaire */
 /* fond de couleur jaune */
 /* texte non souligné */
 /* marge interne 2 pixels à gauche et à droite */
 
-
+p > a {
+    background-color: yellow;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-right: 2px;
+}
 
 /* Définition première lettre des termes du glossaire */
 /* police 1,5 em */
 
-
+#bachique::first-letter, #tuffeau::first-letter {
+    font-size: 1.5em;
+}
 
 /* Définition liens survolés ou actifs et nom de fleuve mis en valeur */
 /* police de couleur blanche */
 /* fond de couleur a52a2a */
 
-
+a:hover, a:active {
+    color: white;
+    background-color: #a52a2a;
+}
 
 /* Définition images et videos */
 /****** changement de mode d'affichage : insertion de type bloc */
@@ -251,12 +271,16 @@ img, video {
 /* Définition image de la flêche */
 /* pas de bordure */
 
-
+a > img {
+    border: 0px;
+}
 
 /* Définition légendes et paragraphe de navigation */
 /* texte centré */
 
-
+figcaption, nav {
+    text-align: center;
+}
 
 /* Définition tableau *
 /* largeur de 80% */
@@ -264,19 +288,36 @@ img, video {
 /* bords des cellules séparés */ 
 /* cellule vide masquée */
 
-
+table {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: separate;
+    empty-cells:hide;
+}
 
 /* Définition cellules */
 /* bord d'une épaisseur de 1 pixel, trait continu et couleur a52a2a */
 /* texte centré */
 
-
+th, td {
+    border-width: 1px;
+    border-style:solid;
+    border-color: #a52a2a;
+    text-align: center;
+}
 
 /* Définition meilleure note (la plus élevée) */
 /* texte en gras */ 
 
 
 
-/* Définition cellules d'en-tête */
+/* Définition cellules d'en-tête */ 
 /* police de couleur a52a2a */
 /* couleur de fond ccc */
+
+thead {
+    color: #a52a2a;
+    background-color: #ccc;
+}
