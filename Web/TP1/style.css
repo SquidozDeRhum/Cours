@@ -9,7 +9,7 @@ body {
     background-color: #ea9e69;
     background-image: url("images/bouteille.png");
     background-repeat: no-repeat;
-    background-position: bottom,right;
+    background-position: bottom right;
     background-attachment: fixed;
     font-family: "Trebuchet MS", arial, sans-serif;
     color: #d2691e;
@@ -278,7 +278,7 @@ a > img {
 /* Définition légendes et paragraphe de navigation */
 /* texte centré */
 
-figcaption, nav {
+figcaption, footer > nav {
     text-align: center;
 }
 
