@@ -290,3 +290,46 @@ for (int feur = 0; feur < 20; feur++) {
 
 - 'feur++' correspond à de la post-incrémentation
 - '++feur' correspond à de la pré-incrémentation
+
+**Fonctions : **
+
+Permet de faire une modification à un seul endroit
+
+- Procédure : un sous programme indépendant qui regroupe une suite d'instructions
+
+  - ```pseudocode
+    procédure <nomProcédure>(type : modeTrans nomPar)
+    début
+        //Déclaration des variables de la procédure
+        //Instructions de la procédure
+        sortie feur = ...;
+    fin
+    		
+    programme <nomProgramme>
+    début
+    	//Déclaration de variables
+    	<nomProcédure>(sortie feur);
+    fin
+    ```
+
+- Fonction : procédure qui retourne une valeur
+
+  - ```pseudocode
+    fonction <nomProcédure>(type : modeTrans nomPar) delivre <type>
+    début
+        //Déclaration des variables de la procédure
+        type jaaj;
+        //Instructions de la procédure
+        //opérations sur jaaj
+        retourne jaaj;
+    fin
+    		
+    programme <nomProgramme>
+    début
+    	//Déclaration de variables
+    	type juuj;
+    	juuj := <nomProcédure>(feur);
+    fin
+    ```
+
+    

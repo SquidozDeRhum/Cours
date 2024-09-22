@@ -1,0 +1,38 @@
+//Par les conditions
+programme prime
+debut
+    chaine nom;
+    reel anciennete, salaire, prime;
+    ecrire("Quel est votre nom : ");
+    nom := lire();
+    ecrire("Quel est votre ancienneté ? (En année) ");
+    anciennete := lire();
+    ecrire("Quem est votre salaire ? ");
+    salaire := lire();
+    si (anciennete > 10 et salaire < 10000) alors
+        prime := 2;
+    sinon si (salaire < 10000 et anciennete < 10)
+        prime := 1;
+    sinon si (salaire >= 10000 et anciennete > 10)
+        prime := 1;
+    sinon si (salaire >= 10000 et anciennete < 10)
+        prime := 1;
+    ecrire(nom, " votre est la : ", prime);
+fin
+//Par les actions
+programme prime
+debut
+    chaine nom;
+    reel anciennete, salaire, prime;
+    ecrire("Quel est votre nom : ");
+    nom := lire();
+    ecrire("Quel est votre ancienneté ? (En année) ");
+    anciennete := lire();
+    ecrire("Quem est votre salaire ? ");
+    salaire := lire();
+    si (anciennete > 10 et salaire < 10000) alors
+        prime := 2;
+    sinon 
+        prime := 1;
+    ecrire(nom, " votre est la : ", prime);
+fin

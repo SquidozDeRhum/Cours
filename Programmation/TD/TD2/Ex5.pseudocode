@@ -1,0 +1,20 @@
+programme hotel
+    const reel cat1 := 40.0;
+    const reel cat2 := 55.5;
+    const reel cat3 := 70.0;
+debut
+    chaine nom;
+    entier nuits, classe;
+    reel remboursement;
+    ecire("Quel est votre nom ? ");
+    nom := lire();
+    ecire("Quel est votre classe ? ");
+    classe := lire();
+    si classe == 1 alors
+        remboursement := nuits * cat1;
+    si classe == 2 alors
+        remboursement := nuits * cat2;
+    sinon  
+        remboursement := nuits * cat3;
+    ecrire(nom ", votre remboursement max est de : ", remboursement);
+fin

@@ -1,0 +1,32 @@
+programme PlusPetit
+debut
+    entier un, deux, trois;
+    ecire("Veuillez un premier entier : ");
+    un := lire();
+    ecire("Veuillez un second entier : ");
+    deux := lire();
+    ecire("Veuillez un troisième entier : ");
+    trois := lire();
+    si (un < deux) alors
+        si (deux < trois) alors
+            ecrire(un);
+        sinon si (trois < un) alors
+            ecrire trois
+    sinon si (deux < trois) alors
+        ecrire(deux);
+    sinon si (un < trois) alors
+        ecrire(trois)
+fin
+
+//2
+
+programme PlusPetit
+debut
+    entier un, deux, trois;
+    ecire("Veuillez un premier entier : ");
+    un := lire();
+    ecire("Veuillez un second entier : ");
+    deux := lire();
+    ecire("Veuillez un troisième entier : ");
+    trois := lire();
+    

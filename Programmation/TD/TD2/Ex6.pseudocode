@@ -1,0 +1,20 @@
+programme racines c'est
+début
+    reel un, deux, trois, delta;
+    ecire("Veuillez un premier reel : ");
+    un := lire();
+    ecire("Veuillez un second reel : ");
+    deux := lire();
+    ecire("Veuillez un troisième reel : ");
+    trois := lire();
+    delta = deux * deux - 4 * un * trois;
+    si (delta < 0) alors
+        ecrire("Il n'existe pas de solution réelle");
+    sinon si (delta == 0) alors
+        ecire("Il existe une solution : ");
+        ecrire("X0 = ", (-deux/2 * un))
+    sinon
+        ecire("Il existe deux solution : ");
+        ecrire("X1 = ", ((-deux - racine(delta))/2 * un));
+        ecrire("X2 = ", ((-deux + racine(delta))/2 * un));
+fin
