@@ -9,7 +9,7 @@ body {
     background-color: #ea9e69;
     background-image: url("images/bouteille.png");
     background-repeat: no-repeat;
-    background-position: bottom,right;
+    background-position: bottom right;
     background-attachment: fixed;
     font-family: "Trebuchet MS", arial, sans-serif;
     color: #d2691e;
@@ -29,6 +29,8 @@ header, main, footer {
     margin-bottom: 20px;
     padding: 10px;
     border: 4px;
+    border-style: inset;
+    border-color: #d2691e;
     background-color: #fff;
 }
 
@@ -42,8 +44,9 @@ header, main, footer {
 h1 {
     font-family: "Bauhaus 93", arial, sans-serif;
     font-size: 2.5em;
+    font-variant: small-caps;
     line-height: 2.1em;
-    text-transform: lowercase ,capitalize;
+    text-transform: capitalize;
     text-align: center;
     word-spacing: 20px;
     background-image: url("images/feuille_vigne.png");
@@ -117,7 +120,7 @@ h3 {
 /* marge externe de 20 pixels en haut et de 70% à droite */
 
 h4, #bachique, #tuffeau {
-    position: 20px;
+    text-indent: 20px;
     border-left-style: solid;
     border-left-width: 4px;
     border-bottom-style: solid;
@@ -176,9 +179,8 @@ blockquote {
 
 ul {
     list-style-position: inside;
-    list-style: disc;
-    list-style-image: url("images/icone_grappe_blanc.gif");
-    text-transform: lowercase;
+    list-style-image: url("images/icone_grappe_rouge.gif");
+    font-variant: small-caps;
 }
 
 /* Définition sous liste non ordonnée */
@@ -189,6 +191,7 @@ li > ul {
     list-style: square;
     list-style-position: inside;
     list-style-image: none;
+    font-variant: normal;
 }
 
 /* Définition liens normaux ou visités */
@@ -211,7 +214,7 @@ li > a {
 /* texte centré */
 /* taille de la police 0,9 em */
 
-.appelation {
+h3 + p {
     text-align: center;
     font-size: 0.9em;
 }
@@ -221,7 +224,7 @@ li > a {
 /* texte justifié */
 /* espacement des mots : -2 pixels */
 	
-.localisation {
+h4 + p{
     text-indent: 30px;
     text-align: justify;
     word-spacing: -2px;
@@ -232,7 +235,7 @@ li > a {
 /* texte non souligné */
 /* marge interne 2 pixels à gauche et à droite */
 
-p > a {
+.glossaire {
     background-color: yellow;
     text-decoration: none;
     padding-left: 2px;
@@ -250,7 +253,7 @@ p > a {
 /* police de couleur blanche */
 /* fond de couleur a52a2a */
 
-a:hover, a:active {
+a:hover, a:active, .fleuve {
     color: white;
     background-color: #a52a2a;
 }
@@ -278,7 +281,7 @@ a > img {
 /* Définition légendes et paragraphe de navigation */
 /* texte centré */
 
-figcaption, nav {
+figcaption, footer > nav {
     text-align: center;
 }
 
@@ -290,9 +293,7 @@ figcaption, nav {
 
 table {
     width: 80%;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     border-collapse: separate;
     empty-cells:hide;
 }
@@ -303,7 +304,7 @@ table {
 
 th, td {
     border-width: 1px;
-    border-style:solid;
+    border-style: solid;
     border-color: #a52a2a;
     text-align: center;
 }
@@ -317,7 +318,20 @@ th, td {
 /* police de couleur a52a2a */
 /* couleur de fond ccc */
 
-thead {
+th {
     color: #a52a2a;
     background-color: #ccc;
+}
+
+figure {
+    display: inline-block;
+}
+
+map + nav {
+    clear: both;
+    display: inline-block;
+}
+
+a > img {
+    margin: auto auto auto 95%;
 }

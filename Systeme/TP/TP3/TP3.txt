@@ -1,0 +1,29 @@
+Q1. Le chemin absolue vers la commande
+Q2. Rien car la commande n'existe pas
+Q3. PID TTY          TIME CMD
+   7736 pts/1    00:00:00 bash
+   9969 pts/1    00:00:00 ps
+L'ensemble des processus en cours dans le terminal
+
+PID : processus ID
+TTY : TeleTYpe
+TIME : Temps CPU d'éxécution
+
+ps -edf : liste de tout les processus en cours sur la machine
+
+UID est le propriétaire du processus, l’utilisateur qui a lancé la commande qui a
+engendré le processus
+
+PPID : PID du processus parent
+
+Q5. Le shell est son parent
+
+G6. Genay -> 25cd24 -> Linux-gnu -> 2024 -> xfce4-panel -> 1845 -> xfce4-session -> 1749 -> lightdm --session-child 13 24 -> 1169 -> /usr/sbin/lightdm -> 1 -> /lib/systemd/systemd
+
+Q7. Fait
+
+Q8. Le PID
+
+kill : envoyer un signal au processus
+
+& à la fin d'une commande pour la lancer en mode asynchrone
