@@ -1,0 +1,13 @@
+Q1. La commande n'affiche rien car son résultat à été stocké dans le fichier
+Q2. On obtient une erreur car zorglub n'existe pas, le fichier a été créé mais ne contient rien
+Q3. Nous n'avons pas d'affichage, le fichier a été créé et contient notre erreur
+Q4. Il n'y a pas eu d'erreur, on trouve un message d'erreur dans errors et un résultat dans list_users
+Q5. Rien de différent ne s'est passé
+Q6. Le contenu est le même
+Q7. L'erreur est affiché dans le terminal car aucune référence ne peut-être faite
+Q8. On voit les demandes mais impossible de saisir une valeur, le résultat correspond aux valeurs données
+Q9. Fait 
+Q10. Cela fait 59 lignes
+Q11. Le programme tourne sans prendre fin, car on ne lui donne pas de 0 pour terminer
+    Solution : seq 100 -1 0 | ./moy
+Q12. Fait

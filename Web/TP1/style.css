@@ -263,7 +263,7 @@ a:hover, a:active, .fleuve {
 /****** marge externe de 0 pixel en haut et en bas, automatique à gauche et à droite */
 /* bordure 1px inset a52a2a */
 
-img, video {
+article > img, video {
     display: block;
     margin: auto;
     margin-top: 0px;
