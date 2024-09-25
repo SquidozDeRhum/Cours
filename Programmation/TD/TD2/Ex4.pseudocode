@@ -1,0 +1,12 @@
+programme Assurance
+debut
+    reel prix, franchise;
+    ecrire("Quel est le montant de votre sinistre ? ");
+    prix := lire();
+    franchise := prix * 0.1;
+    si franchise < 150 alors
+        franchise := 150;
+    sinon si franchise > 600:
+        franchise := 600;
+    ecrire("Le montant de votre franchise est : ", franchise);
+fin

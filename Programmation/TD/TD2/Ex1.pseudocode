@@ -1,0 +1,17 @@
+programme calcul_taxe
+    constante reel SEUIL := 500.0;
+    constante reel taxe := 0.75;
+debut
+    reel tauxTaxe, somme, resu;
+
+    tauxTaxe := 0.0;
+    somme := 0.0;
+    resu := 0.0;
+
+    ecrire("Donnez un taux de taxe : ");
+    tauxTaxe := lire();
+    ecrire("Donnez un taux une somme : ");
+    somme := lire();
+    resu := somme * tauxTaxe;
+    ecrire("Résultat : ", resu);
+fin
