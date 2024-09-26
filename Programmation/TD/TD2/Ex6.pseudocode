@@ -8,7 +8,9 @@ début
     ecire("Veuillez un troisième reel : ");
     trois := lire();
     delta = deux * deux - 4 * un * trois;
-    si (delta < 0) alors
+    si (delta == 0) alors
+        ecrire("Il existe une infinité de solutions");
+    sinon si (delta < 0) alors
         ecrire("Il n'existe pas de solution réelle");
     sinon si (delta == 0) alors
         ecire("Il existe une solution : ");

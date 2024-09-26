@@ -10,9 +10,11 @@ debut
     nom := lire();
     ecire("Quel est votre classe ? ");
     classe := lire();
+    ecire("Combien de nuits avez-vous passé ?");
+    nuits := lire();
     si classe == 1 alors
         remboursement := nuits * cat1;
-    si classe == 2 alors
+    sinon si classe == 2 alors
         remboursement := nuits * cat2;
     sinon  
         remboursement := nuits * cat3;

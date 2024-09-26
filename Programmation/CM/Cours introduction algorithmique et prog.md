@@ -332,4 +332,21 @@ Permet de faire une modification à un seul endroit
     fin
     ```
 
-    
+
+**Fonctions en C** : 
+
+```c
+void affiche_moyenne(int v1, int2) {
+	float moy;
+	moy = (v1+v2)/2.0;
+	printf("La moyenne de %d et de %d est %f", v1, v2, moy);
+}
+```
+
+```c
+void moyenne(int v1, v2, float * adr_moy) {
+    *adr_moy = (v1 + v2)/2.0;
+}
+```
+
+On mettra le prototype des fonctions au-dessus du main et leurs définitions en-dessous
