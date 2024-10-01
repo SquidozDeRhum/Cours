@@ -1,0 +1,13 @@
+Q1. cat lang prod | wc -c
+Q2. cat lang prod | wc -w
+Q3. sort -t : -k 5 < prod 
+Q4. sort -t : -k 5 -k 1,1  < prod
+Q5. sort -t : -k 4,4  < prod
+Q6. sort -t : -k 5 -u  < prod
+Q7. uniq -c depts
+Q8. colrm 1 5 < depts
+Q9. cut -d : -f 1-3 < prod
+Q10. cut -d : -f 2  < depts
+Q11. head -3 < lang | sort
+Q12. head -6 < depts | tail -3
+Q13. tr a-z A-Z < lorem
