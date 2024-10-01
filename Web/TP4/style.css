@@ -14,7 +14,7 @@ main {
 }
 
 header {
-    width: 800px;
+    width: 850px;
     background-color: #72a3ff;
     margin: 10px auto ;
     padding: 20px;
@@ -26,8 +26,14 @@ main {
 }
 
 figure {
-   display: inline-block;
-    margin: 4px;
+    width: 22%;
+    display: inline-block;
+}
+
+aside + figure {
+    float: right;
+    margin-top: 30px;
+    width: 27%;
 }
 
 main > nav {
@@ -48,7 +54,9 @@ main > figure {
 footer {
     background-color: #72a3ff;
     margin: 10px;
-    height: 310px;
+    height: 320px;
+    padding-top: 1px;
+    padding-left: 20px;
 }
 
 .pierre {
@@ -75,7 +83,7 @@ main + aside {
 }
 
 header + aside {
-    width: 800px;
+    width: 850px;
     padding: 18px;
     text-align: center;
     margin: auto ;
@@ -83,4 +91,16 @@ header + aside {
     border: 2px;
     border-style: inset;
     border-color: #7f87b0;
+    position: sticky;
+    top: 20px;
+}
+
+article {
+    padding: 20px;
+    
+}
+
+
+h1 {
+    text-transform: uppercase;
 }
