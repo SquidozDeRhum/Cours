@@ -226,16 +226,16 @@ Opérateurs booléen :
 - inégalité : <=, >= <, >
 - différence !=
 
-Exemple d'alternatives en C : 
+**Exemple d'alternatives en C** : 
 
 ```c
 if (condition) {
     //instructions
 }
-else {
+else if {
     //instructions
 }
-else if {
+else {
     //instructions
 }
 ```
