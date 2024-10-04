@@ -1,0 +1,37 @@
+Q1. cat | tr a-z A-Z < prod
+Q2. cut -d ':' -f 1,2 < prod | sort -t : -k 2 -n
+Q3. cut -d ':' -f 3 < prod | sort  | uniq -c
+Q4. tr -s ' ' < lang
+Q5. tr -s ' ' < lang | sort -t ' ' -k2 -k1
+Q6. tr -s ' ' < lang | cut -d ' ' -f 2 | colrm 1 2
+Q7.
+Q8. tr "'" " " < depts
+Q9. cut -c 6 < depts | uniq
+Q10. cut -c 6 < depts | uniq -c | sort -k1 -r //La lettre c
+Q11. tr ' ' _ < murphy
+Q12. tr -d ' ' < murphy
+Q13. tr -d ';' < murphy
+Q14. tr -d 'aeiou' < lorem
+Q15. tr 'A-Za-z' 'a-zA-Z' < lorem
+Q16. tr '\n' ' ' < lorem
+Q17. tr '\n' ' ' < lorem | tr -s ' '
+Q18. tr '\n' ' ' < lorem | tr -s ' ' | tr -d '.'
+Q19. tr '\n' ' ' < lorem | tr -s ' ' | tr -d '.' | tr ' ' '\n'
+Q20. tr '\n' ' ' < lorem | tr -s ' ' | tr -d '.' | tr ' ' '\n' | sort | uniq -c
+Q21. tr '\n' ' ' < lorem | tr -s ' ' | tr -d '.' | tr ' ' '\n' | sort | uniq -c | sort -k1 -r| head -3
+Q22. tr '\n' ' ' < lorem | tr -s ' ' | tr -d '.' | tr ' ' '\n' | sort | uniq -c | sort -k1 -r| head -3 | colrm 1 8
+Q23. tr '\n' ' ' < lorem | tr -s ' ' | tr -d '.' | tr ' ' '\n' | sort | uniq -ic | sort -k1 -r| head -5
+Q24. tr 'a-z' 'A-Z' < clair > césar
+Q25. tr 'A-Z' 'B-Z-A' < césar > crypto
+Q26. tr 'A-Z' 'A-Z-B' < césar
+Q27. tr 'A-Z' 'N-ZA-M' < césar > crypto12
+Q28. On revient au fichier originel
+Q29. Non on a pas besoin d'une commande de décodage, ça dépend avec cette commande précise, non mais en gardant le codage de césar avec de l'UTF-8 oui
+Q30. 
+PROVERBES BRETONS :
+- PINGOUINS DANS LES CHAMPS, HIVER MECHANT
+- QUAND LES MOUETTES ONT PIED, IL EST TEMPS DE VIRER
+- QUI TROP ECOUTE LA METEO, PASSE SA VIE AU BISTROT
+
+... DE L'IUT DE LANNION :
+HEUREUX L'ETUDIANT QUI, COMME LA RIVIERE, ARRIVE A SUIVRE SON COURS SANS SORTIR DE SON LIT
