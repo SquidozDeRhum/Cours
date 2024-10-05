@@ -252,7 +252,7 @@ switch(variable){
     case constante2:
         //instructions
         break;
-    case constanten:
+    case constante2:
         //instructions
         break;
     default:
@@ -350,3 +350,14 @@ void moyenne(int v1, v2, float * adr_moy) {
 ```
 
 On mettra le prototype des fonctions au-dessus du main et leurs définitions en-dessous
+
+**Les tableaux** : 
+
+Les éléments d'un tableau sont de même type
+
+Déclaration d'un tableau en pseudocode : 
+
+```pseudocode
+tableau(type)[taille] : nom_tableau;
+```
+
