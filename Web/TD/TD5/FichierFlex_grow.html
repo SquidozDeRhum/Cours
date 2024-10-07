@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  	<head>
+    	<meta charset="utf-8" />
+		<title>Flux courant</title>
+		<style type="text/css">
+			body, h4 {
+				margin: 0; 
+			} 
+			section, #bloc1, #bloc2, #bloc3, #bloc4, #bloc5, #bloc6 {
+				padding: 0.5em;
+				border-radius: 0.5em;	
+			}
+			#bloc1, #bloc2, #bloc3, #bloc4, #bloc5, #bloc6 {
+				color: #000;
+			}
+			section {
+				color: #fff;
+				background-color: #000;
+				height: 5em;
+				display: flex;
+				flex-direction: row-reverse;
+				align-content: stretch;
+			}
+			#bloc1 {
+				background-color: #52f7ee;
+				flex-grow: 0;
+				flex-shrink: 0;
+				flex-basis: 20em;
+				align-self: center;
+				height: 2em;
+			}
+			#bloc2 {
+				background-color: #47b9d7;
+				flex-basis: 1em;
+				flex-shrink: 0;
+				flex-grow: 3;
+			}
+		
+			#bloc3 {
+				background-color: #466dd7;
+				flex-grow: 1;
+				height: 2em;
+				flex-basis: 10em;
+				flex-shrink: 0;
+				align-self: flex-start;
+			}
+
+		</style>
+	</head>
+	<body>
+		<section>
+			<article id="bloc1">
+				<h4>Cadre1</h4>
+ 			</article>
+			<article id="bloc2">
+				<h4>Cadre2</h4>
+			</article>
+			<article id="bloc3">
+				<h4>Cadre3</h4>	
+			</article>
+		</section>
+	</body>
+</html>
