@@ -7,11 +7,11 @@ int main() {
     printf("Veuillez entrer le nombre de valeurs de la suite : ");
     scanf("%d", &size);
 
-    if (size != 0) {
+    if (size > 0) {
         printf("Veuillez saisir un entier : ");
         scanf("%d", &number);
         max = number;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size - 1; i++) {
             printf("Veuillez saisir un entier : ");
             scanf("%d", &number);
             if (number > max) {
@@ -21,7 +21,7 @@ int main() {
         printf("La valeur maximale est : %d\n", max);
     }
     else {
-        printf("La taille de la liste est de 0\n");
+        printf("La taille de la liste est invalide\n");
     }
     return 0;
 }
