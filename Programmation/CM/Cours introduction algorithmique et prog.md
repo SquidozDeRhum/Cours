@@ -361,3 +361,4 @@ Déclaration d'un tableau en pseudocode :
 tableau(type)[taille] : nom_tableau;
 ```
 
+On déclare, les constante, les typedef  (structure) puis les procédures avant le main en C.
