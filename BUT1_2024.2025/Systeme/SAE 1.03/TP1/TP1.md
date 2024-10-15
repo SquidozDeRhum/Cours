@@ -7,6 +7,12 @@ Un conteneur :
 * Permet de cloisonner et d'isoler son contenu
 * Peut toujours partager des fichiers avec son hôte ou d'autres conteneurs
 
+Syntaxe de pull d'images : docker image pull <nom_image>
+Syntaxe pour lancer une image : docker container run <nom_image>
+Syntaxe paramètres : docker container run <nom_image> which <paramètre>
+Lister les conteneurs : docker container ps (-a)
+Stopper un conteneur : docker container stop <ID>
+
 Q1. Oui on trouve tictac, containerd-shim l'a lancé, l'utilisateur est 165536, PID : 17155
 
 Q2. Non
