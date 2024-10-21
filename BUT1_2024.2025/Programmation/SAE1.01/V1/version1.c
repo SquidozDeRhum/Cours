@@ -27,16 +27,25 @@ void progresser(int laPosition[N][2]);
 
 int main() {
 
-    int positions[2][N];
+    // int positions[2][N];
+	char p, feur;
+
+	p = 'a';
+
+	/*
 
     printf("Veuillez donner la position x de la tête : ");
-    scanf("%d", positions[0][0]);
+    scanf("%d", &positions[0][0]);
     printf("Veuillez donner la position y de la tête : ");
-    scanf("%d", positions[0][1]);
-
-    system("clear");
-    afficher(1, 1, '*');
-    printf("\n");
+    scanf("%d", &positions[0][1]);
+	*/
+    
+	while (1) {
+		printf("%c\n", p);
+		sleep(1);
+		p++;
+		if (kbhit)
+	}
 
     return EXIT_SUCCESS;
 }
