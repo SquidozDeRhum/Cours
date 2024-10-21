@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n Donnez un numéro de département : 
+read dep
+egrep $dep < depts

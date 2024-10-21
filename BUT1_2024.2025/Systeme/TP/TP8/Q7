@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n Veuillez saisir le nom du fichier : 
+read path
+touch ${path}_old\.txt

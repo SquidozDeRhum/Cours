@@ -1,0 +1,5 @@
+#!/bin/bash
+for fic in test123 abc _def toto\.old
+do
+    touch $fic
+done

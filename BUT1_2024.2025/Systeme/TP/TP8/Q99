@@ -1,0 +1,9 @@
+#!/bin/bash
+echo -n Nom de fichier :
+read fic
+touch $fic\.c
+echo "#include <stdio.h>" > $fic\.c
+echo "int main() {" >> $fic\.c
+echo 'printf("Hello World!\n");' >> $fic\.c
+echo "}" >> $fic\.c
+gcc $fic\.c -o $fic -Wall

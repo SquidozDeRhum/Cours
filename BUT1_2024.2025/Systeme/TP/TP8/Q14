@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n Texte : 
+read text
+egrep -c $text < prod

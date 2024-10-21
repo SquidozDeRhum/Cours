@@ -1,0 +1,7 @@
+#!/bin/bash
+if test $# -lt 2
+then
+    echo Erreur de saisie
+    exit 1
+fi
+cut -d ":" -f $1 < prod | egrep $2

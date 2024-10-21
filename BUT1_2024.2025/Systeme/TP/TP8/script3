@@ -1,0 +1,4 @@
+#!/bin/bash
+echo  -n "Veuillez donner votre prénom : "
+read prenom
+echo Bonjour $prenom

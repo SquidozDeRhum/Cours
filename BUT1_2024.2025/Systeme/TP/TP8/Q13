@@ -1,0 +1,6 @@
+#!/bin/bash
+echo -n Texte :
+read text
+echo -n Champ : 
+read champ
+cut -d ":" -f $champ < prod | egrep $text

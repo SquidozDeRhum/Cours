@@ -1,0 +1,15 @@
+#!/bin/bash
+echo -n Texte : 
+read text
+if test "$text" = ""
+then
+    echo Erreur de saisie
+    exit 1
+fi
+number=$(egrep -c $text < prod)
+if test $number -gt 0
+then
+    echo $number
+else
+    echo Aucun
+fi
