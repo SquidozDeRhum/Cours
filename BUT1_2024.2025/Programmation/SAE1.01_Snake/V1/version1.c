@@ -5,8 +5,9 @@
 * @version Version 1
 * @date 15 octobre 2024
 *
-* <description plus complète du programme>
-*
+* Le programme demande à l'utilisateur des coordonnées X et Y du serpent
+* puis affiche et fait avancer vers la droite celui-ci 
+* 
 */
 
 #include <stdio.h>
@@ -17,30 +18,49 @@
 
 #define N 10
 #define TAILLE 30
+#define ARRET 'a'
+#define MIN 1
+#define MAX 40
 
 void gotoXY(int x, int y);
 int kbhit();
 void afficher(int x, int y, char c);
 void effacer(int x, int y);
-void dessineSerpent(int laPosition[2][N]);
-void progresser(int laPosition[2][N]);
+void dessineSerpent(int laPosition[N][2]);
+void progresser(int laPosition[N][2]);
 
 int main() {
 
-    int positions[2][N];
+    int positions[N][2];
 	int car;
 
-    printf("Veuillez donner la position x de la tête : ");
+    printf("Veuillez saisir la position x de la tête : ");
     scanf("%d", &positions[0][0]);
+
+	while (positions[0][0] < MIN || positions[0][0] > MAX) {
+		fprintf(stderr, "Il y a un problème dans la saisie de la position, veuillez recommencer.\n");
+		printf("Veuillez saisir la position x de la tête : ");
+		scanf("%d", &positions[0][0]);
+
+	}
+
     printf("Veuillez donner la position y de la tête : ");
     scanf("%d", &positions[0][1]);
+
+	while (positions[0][1] < MIN || positions[0][1] > MAX) {
+		fprintf(stderr, "Il y a un problème dans la saisie de la position, veuillez recommencer.\n");
+		printf("Veuillez donner la position y de la tête : ");
+		scanf("%d", &positions[0][1]);
+	}
+
+	system("clear");
 
 	for (int i = 1; i < N; i++) {
 		positions[i][0] = positions[i - 1][0] - 1;
 		positions[i][1] = positions[0][1];
 	}
 
-	while (car != 'a')
+	while (car != ARRET)
 	{
 		progresser(positions);
 		usleep(999999);
@@ -94,21 +114,25 @@ int kbhit(){
 	return unCaractere;
 }
 
-void dessineSerpent(int laPosition[2][N]) {
-	system("clear");
+void dessineSerpent(int laPosition[N][2]) {
 	for (int i = 1; i < N; i++) {
 			if (laPosition[i][0] > 0 && laPosition[i][1] > 0) {
-				afficher(laPosition[i][0], laPosition[i][1], 'o');
+				afficher(laPosition[i][0], laPosition[i][1], 'X');
 			}
-		}
-	afficher(laPosition[0][0], laPosition[0][1], '*');
+	}
+	afficher(laPosition[0][0], laPosition[0][1], 'O');
 	gotoXY(TAILLE, TAILLE);
 	fflush(stdout);
 }
 
-void progresser(int laPosition[2][N]) {
+void progresser(int laPosition[N][2]) {
 	dessineSerpent(laPosition);
+	effacer(laPosition[N - 1][0], laPosition[N - 1][1]);
 	for (int i = 0; i < N; i++) {
 			laPosition[i][0]++;
 	}
+}
+
+void effacer(int x, int y) {
+	afficher(x, y, ' ');
 }
