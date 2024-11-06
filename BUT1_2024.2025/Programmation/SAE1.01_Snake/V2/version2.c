@@ -19,6 +19,11 @@
 #define ARRET 'a'     /**< Caractère pour arrêter le jeu */
 #define MIN 1         /**< Valeur minimale des coordonnées */
 #define MAX 40        /**< Valeur maximale des coordonnées */
+#define HAUT 'z'
+#define BAS 's'
+#define GAUCHE 'q'
+#define DROITE 'd'
+#define TEMPORISATION 500000
 
 /**
  * @brief Déplace le curseur à la position spécifiée dans la console.
@@ -58,7 +63,7 @@ void dessineSerpent(int laPosition[N][2]);
  * @brief Fait progresser le serpent en déplaçant ses segments.
  * @param laPosition Tableau contenant les coordonnées des segments du serpent
  */
-void progresser(int laPosition[N][2]);
+void progresser(int laPosition[N][2], char direction);
 
 /**
  * @brief Fonction principale du programme.
@@ -66,7 +71,8 @@ void progresser(int laPosition[N][2]);
  */
 int main() {
     int positions[N][2];
-    char car;
+    char pressed_car;
+	char direction = DROITE;
 
     printf("Snake Version 1\n");
     printf("Les positions X et Y doivent être comprises entre %d et %d\n", MIN, MAX);
@@ -96,11 +102,35 @@ int main() {
         positions[i][1] = positions[0][1];
     }
 
-    while (car != ARRET) {
-        progresser(positions);
-        usleep(999999);
+    while (pressed_car != ARRET) {
+        progresser(positions, direction);
+        usleep(TEMPORISATION);
         if (kbhit()) { // Récupération du caractère pressé
-            scanf("%c", &car);
+            scanf("%c", &pressed_car);
+
+			switch (pressed_car)
+			{
+			case HAUT:
+				if (direction != BAS) {
+					direction = HAUT;
+				}
+				break;
+			case BAS:
+				if (direction != HAUT) {
+					direction = BAS;
+				}
+				break;
+			case GAUCHE:
+				if (direction != DROITE) {
+					direction = GAUCHE;
+				}
+				break;
+			case DROITE:
+				if (direction != GAUCHE) {
+					direction = DROITE;
+				}
+				break;
+			}
         }
     }
     
@@ -153,12 +183,33 @@ void dessineSerpent(int laPosition[N][2]) {
     fflush(stdout);
 }
 
-void progresser(int laPosition[N][2]) {
-    dessineSerpent(laPosition);
+void progresser(int laPosition[N][2], char direction) {
+	int copie[N][2];
+	for (int i = 0; i < N; i++) {
+		copie[i][0] = laPosition[i][0];
+		copie[i][1] = laPosition[i][1];
+	}
     effacer(laPosition[N - 1][0], laPosition[N - 1][1]);
-    for (int i = 0; i < N; i++) {
-        laPosition[i][0]++;
+	switch (direction)
+			{
+			case HAUT:
+				laPosition[0][1]--;
+				break;
+			case BAS:
+				laPosition[0][1]++;
+				break;
+			case GAUCHE:
+				laPosition[0][0]--;
+				break;
+			case DROITE:
+				laPosition[0][0]++;
+				break;
+			}
+    for (int i = 1; i < N; i++) {
+		laPosition[i][0] = copie[i - 1][0];
+		laPosition[i][1] = copie[i - 1][1];
     }
+    dessineSerpent(laPosition);
 }
 
 void effacer(int x, int y) {
