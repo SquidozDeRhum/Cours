@@ -1,0 +1,12 @@
+[class*="col"] {
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+}
+
+article {
+    height: 100px;
+}
