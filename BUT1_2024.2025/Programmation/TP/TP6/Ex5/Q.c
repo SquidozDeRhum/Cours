@@ -3,8 +3,9 @@
 #include <time.h>
 
 int main() {
+    srand(time(NULL));
     for (int i = 0; i < 5; i++) {
-        printf("%d", rand());
+        printf("%d\n", rand());
     }
     return EXIT_SUCCESS;
 }
