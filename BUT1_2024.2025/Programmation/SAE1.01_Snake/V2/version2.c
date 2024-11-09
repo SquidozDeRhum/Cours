@@ -24,6 +24,8 @@
 #define GAUCHE 'q'
 #define DROITE 'd'
 #define TEMPORISATION 500000
+#define X_INIT 20
+#define Y_INIT 20
 
 /**
  * @brief Déplace le curseur à la position spécifiée dans la console.
@@ -69,33 +71,20 @@ void progresser(int laPosition[N][2], char direction);
  * @brief Fonction principale du programme.
  * Demande les coordonnées initiales du serpent, l'affiche, et le fait avancer jusqu'à l'arrêt du jeu.
  */
+void disableEcho();
+void enableEcho();
+
 int main() {
     int positions[N][2];
     char pressed_car;
 	char direction = DROITE;
 
-    printf("Snake Version 1\n");
-    printf("Les positions X et Y doivent être comprises entre %d et %d\n", MIN, MAX);
-
-    printf("Veuillez saisir la position x de la tête : ");
-    scanf("%d", &positions[0][0]);
-
-    while (positions[0][0] < MIN || positions[0][0] > MAX) {
-        fprintf(stderr, "Il y a un problème dans la saisie de la position, veuillez recommencer.\n");
-        printf("Veuillez saisir la position x de la tête : ");
-        scanf("%d", &positions[0][0]);
-    }
-
-    printf("Veuillez donner la position y de la tête : ");
-    scanf("%d", &positions[0][1]);
-
-    while (positions[0][1] < MIN || positions[0][1] > MAX) {
-        fprintf(stderr, "Il y a un problème dans la saisie de la position, veuillez recommencer.\n");
-        printf("Veuillez donner la position y de la tête : ");
-        scanf("%d", &positions[0][1]);
-    }
+    printf("Snake Version 2\n");
+    positions[0][0] = X_INIT;
+    positions[0][1] = Y_INIT;
 
     system("clear");
+    disableEcho();
 
     for (int i = 1; i < N; i++) {
         positions[i][0] = positions[i - 1][0] - 1;
@@ -135,7 +124,46 @@ int main() {
     }
     
     system("clear");
+    enableEcho();
     return EXIT_SUCCESS;
+}
+
+void disableEcho() {
+    struct termios tty;
+
+    // Obtenir les attributs du terminal
+    if (tcgetattr(STDIN_FILENO, &tty) == -1) {
+        perror("tcgetattr");
+        exit(EXIT_FAILURE);
+    }
+
+    // Desactiver le flag ECHO
+    tty.c_lflag &= ~ECHO;
+
+    // Appliquer les nouvelles configurations
+    if (tcsetattr(STDIN_FILENO, TCSANOW, &tty) == -1) {
+        perror("tcsetattr");
+        exit(EXIT_FAILURE);
+    }
+}
+
+void enableEcho() {
+    struct termios tty;
+
+    // Obtenir les attributs du terminal
+    if (tcgetattr(STDIN_FILENO, &tty) == -1) {
+        perror("tcgetattr");
+        exit(EXIT_FAILURE);
+    }
+
+    // Reactiver le flag ECHO
+    tty.c_lflag |= ECHO;
+
+    // Appliquer les nouvelles configurations
+    if (tcsetattr(STDIN_FILENO, TCSANOW, &tty) == -1) {
+        perror("tcsetattr");
+        exit(EXIT_FAILURE);
+    }
 }
 
 
