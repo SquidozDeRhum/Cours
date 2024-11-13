@@ -1,6 +1,6 @@
 /**
- * @file version1.c
- * @brief Première version d'un snake destiné à la SAE1.01
+ * @file version2.c
+ * @brief Seconde version d'un snake destiné à la SAE1.01
  * @author Aubrée Henri
  * @version 1.0
  * @date 15 octobre 2024
@@ -15,17 +15,17 @@
 #include <unistd.h>
 #include <termios.h>
 
-#define N 10          /**< Nombre de segments du serpent */
-#define ARRET 'a'     /**< Caractère pour arrêter le jeu */
-#define MIN 1         /**< Valeur minimale des coordonnées */
-#define MAX 40        /**< Valeur maximale des coordonnées */
-#define HAUT 'z'
-#define BAS 's'
-#define GAUCHE 'q'
-#define DROITE 'd'
-#define TEMPORISATION 500000
-#define X_INIT 20
-#define Y_INIT 20
+#define N 10        /** Nombre de segments du serpent */
+#define ARRET 'a'   /** Caractère pour arrêter le jeu */
+#define MIN 1       /** Valeur minimale des coordonnées */
+#define MAX 40      /** Valeur maximale des coordonnées */
+#define HAUT 'z'    /** Touche de déplacement haut */
+#define BAS 's'     /** Touche de déplacement bas */   
+#define GAUCHE 'q'  /** Touche de déplacement gauche */
+#define DROITE 'd'  /** Touche de déplacement droit */
+#define TEMPORISATION 200000    /** Temps entre chaque déplacement (en microsecondes)*/
+#define X_INIT 20   /** Position X initiale du serpent */
+#define Y_INIT 20   /** Position Y initiale du serpent */
 
 /**
  * @brief Déplace le curseur à la position spécifiée dans la console.
@@ -68,12 +68,19 @@ void dessineSerpent(int laPosition[N][2]);
 void progresser(int laPosition[N][2], char direction);
 
 /**
+ * @brief Désactive l'affiche des saisies
+ */
+void disableEcho();
+
+/**
+ * @brief Active l'affiche des saisies
+ */
+void enableEcho();
+
+/**
  * @brief Fonction principale du programme.
  * Demande les coordonnées initiales du serpent, l'affiche, et le fait avancer jusqu'à l'arrêt du jeu.
  */
-void disableEcho();
-void enableEcho();
-
 int main() {
     int positions[N][2];
     char pressed_car;
@@ -166,7 +173,6 @@ void enableEcho() {
     }
 }
 
-
 int kbhit() {
     int unCaractere = 0;
     struct termios oldt, newt;
@@ -203,11 +209,13 @@ void afficher(int x, int y, char c) {
 
 void dessineSerpent(int laPosition[N][2]) {
     for (int i = 1; i < N; i++) {
-        if (laPosition[i][0] > 0 && laPosition[i][1] > 0) {
+        if (laPosition[i][0] >= MIN && laPosition[i][1] >= MIN && laPosition[i][0] <= MAX && laPosition[i][1] <= MAX) {
             afficher(laPosition[i][0], laPosition[i][1], 'X');
         }
     }
-    afficher(laPosition[0][0], laPosition[0][1], 'O');
+    if (laPosition[0][0] >= MIN && laPosition[0][1] >= MIN && laPosition[0][0] <= MAX && laPosition[0][1] <= MAX) {
+        afficher(laPosition[0][0], laPosition[0][1], 'O');  
+    }
     fflush(stdout);
 }
 
