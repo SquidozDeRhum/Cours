@@ -1,0 +1,6 @@
+2024-11-14 08:01:41.167 UTC INFO [/home/etuinfo/haubree/Cours/BUT1_2024.2025/BDD/TP3/Theme/Reldb] Start DB remove/truncate scan, id=1 dbId=22 dbName=relvar_141
+2024-11-14 08:01:41.167 UTC INFO [/home/etuinfo/haubree/Cours/BUT1_2024.2025/BDD/TP3/Theme/Reldb] End DB remove/truncate scan, id=1 scanned=2 dbId=22 dbName=relvar_141
+2024-11-14 08:03:21.472 UTC INFO [/home/etuinfo/haubree/Cours/BUT1_2024.2025/BDD/TP3/Theme/Reldb] Start DB remove/truncate scan, id=2 dbId=24 dbName=relvar_144
+2024-11-14 08:03:21.472 UTC INFO [/home/etuinfo/haubree/Cours/BUT1_2024.2025/BDD/TP3/Theme/Reldb] End DB remove/truncate scan, id=2 scanned=0 dbId=24 dbName=relvar_144
+2024-11-14 08:04:46.432 UTC INFO [/home/etuinfo/haubree/Cours/BUT1_2024.2025/BDD/TP3/Theme/Reldb] Start DB remove/truncate scan, id=3 dbId=26 dbName=relvar_147
+2024-11-14 08:04:46.433 UTC INFO [/home/etuinfo/haubree/Cours/BUT1_2024.2025/BDD/TP3/Theme/Reldb] End DB remove/truncate scan, id=3 scanned=0 dbId=26 dbName=relvar_147
