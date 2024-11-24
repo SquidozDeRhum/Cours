@@ -94,3 +94,7 @@ aside {
     border-color: #1f8A70;
     border-radius: 10px 0 0 10px;
 }
+
+figure > img {
+    height: 20vh;
+}

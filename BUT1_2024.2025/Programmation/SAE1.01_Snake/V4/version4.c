@@ -14,11 +14,14 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <termios.h>
+#include <time.h>
 
 #define N 10        /** Nombre de segments du serpent */
 #define ARRET 'a'   /** Caractère pour arrêter le jeu */
 #define MIN 1       /** Valeur minimale des coordonnées */
 #define MAX 40      /** Valeur maximale des coordonnées */
+#define LARGEUR 80
+#define HAUTEUR 40
 #define HAUT 'z'    /** Touche de déplacement haut */
 #define BAS 's'     /** Touche de déplacement bas */   
 #define GAUCHE 'q'  /** Touche de déplacement gauche */
@@ -26,6 +29,8 @@
 #define TEMPORISATION 200000    /** Temps entre chaque déplacement (en microsecondes)*/
 #define X_INIT 20   /** Position X initiale du serpent */
 #define Y_INIT 20   /** Position Y initiale du serpent */
+#define BORD '#'
+#define VIDE ' '
 
 /**
  * @brief Déplace le curseur à la position spécifiée dans la console.
@@ -81,17 +86,27 @@ void enableEcho();
  * @brief Fonction principale du programme.
  * Demande les coordonnées initiales du serpent, l'affiche, et le fait avancer jusqu'à l'arrêt du jeu.
  */
+
+void initPlateau(char tableau[HAUTEUR][LARGEUR]);
+
+void dessinePlateau(char tableau[HAUTEUR][LARGEUR]);
 int main() {
     int positions[N][2];
     char pressed_car;
 	char direction = DROITE;
+    char tableau[HAUTEUR][LARGEUR];
+
+    srand(time(NULL));
+
+    initPlateau(tableau);
 
     printf("Snake Version 2\n");
     positions[0][0] = X_INIT;
     positions[0][1] = Y_INIT;
 
-    system("clear");
     disableEcho();
+
+    dessinePlateau(tableau);
 
     for (int i = 1; i < N; i++) {
         positions[i][0] = positions[i - 1][0] - 1;
@@ -209,7 +224,7 @@ void afficher(int x, int y, char c) {
 
 void dessineSerpent(int laPosition[N][2]) {
     for (int i = 1; i < N; i++) {
-        if (laPosition[i][0] >= MIN && laPosition[i][1] >= MIN && laPosition[i][0] <= MAX && laPosition[i][1] <= MAX) {
+        if (laPosition[i][0] >= MIN && laPosition[i][1] >= MIN) {
             afficher(laPosition[i][0], laPosition[i][1], 'X');
         }
     }
@@ -219,6 +234,7 @@ void dessineSerpent(int laPosition[N][2]) {
     fflush(stdout);
 }
 
+
 void progresser(int laPosition[N][2], char direction) {
 	int copie[N][2];
 	for (int i = 0; i < N; i++) {
@@ -227,7 +243,7 @@ void progresser(int laPosition[N][2], char direction) {
 	}
     effacer(laPosition[N - 1][0], laPosition[N - 1][1]);
 	switch (direction)
-    {
+			{
 			case HAUT:
 				laPosition[0][1]--;
 				break;
@@ -250,4 +266,32 @@ void progresser(int laPosition[N][2], char direction) {
 
 void effacer(int x, int y) {
     afficher(x, y, ' ');
+}
+
+void initPlateau(char tableau[HAUTEUR][LARGEUR]) {
+    for (int i = 0; i < LARGEUR; i ++) {
+        tableau[0][i] = BORD;
+    }
+    for (int i = 1; i < HAUTEUR - 1; i++) {
+        tableau[i][0] = BORD;
+        tableau[i][LARGEUR - 1] = BORD;
+        for (int p = 1; p < LARGEUR - 1; p ++) {
+            tableau[i][p] = VIDE;
+        }
+    }
+    for (int i = 0; i < LARGEUR; i ++) {
+        tableau[HAUTEUR - 1][i] = BORD;
+    }
+    for (int i = 0; i < 5; i ++) {
+        //PAVE
+    }
+}
+
+void dessinePlateau(char tableau[HAUTEUR][LARGEUR]) {
+    system("clear");
+    for (int i = 0; i < HAUTEUR; i ++) {
+        for (int p = 0; p < LARGEUR; p++) {
+            afficher(p + 1, i + 1, tableau[i][p]);
+        }
+    }
 }
