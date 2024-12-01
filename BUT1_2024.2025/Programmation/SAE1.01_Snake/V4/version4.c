@@ -3,10 +3,10 @@
  * @brief Quatrième version d'un snake destiné à la SAE1.01
  * @author Aubrée Henri
  * @version 1.0
- * @date 21 novembre 2024
+ * @date 01 Décembre 2024
  *
- * Ce programme permet à l'utilisateur de saisir les coordonnées X et Y de la tête du serpent,
- * puis affiche et fait avancer le serpent vers la droite.
+ * Ce programme est une version modifié du célèbre jeu Snake
+ * Il possède en plus des éléments de bases des 'blocs' sur les lesquels le serpent peut mourir ainsi que des portes de téléportation
  */
 
 #include <stdio.h>
@@ -16,31 +16,130 @@
 #include <termios.h>
 #include <time.h>
 
-#define N 10                            /** Nombre de segments du serpent */
-#define TAILLE_MAX 20                   /** Taille maximale que le serpent peut atteindre */
-#define ARRET 'a'                       /** Caractère pour arrêter le jeu */
-#define MIN 1                           /** Valeur minimale des coordonnées */
-#define MAX 40                          /** Valeur maximale des coordonnées */
-#define LARGEUR 80                      /** Largeur du plateau de jeu (nombre de colonnes). */
-#define HAUTEUR 40                      /** Hauteur du plateau de jeu (nombre de lignes). */
-#define HAUT 'z'                        /** Touche de déplacement haut */
-#define BAS 's'                         /** Touche de déplacement bas */   
-#define GAUCHE 'q'                      /** Touche de déplacement gauche */
-#define DROITE 'd'                      /** Touche de déplacement droit */
-#define TEMPORISATION 100000            /** Temps entre chaque déplacement (en microsecondes)*/
-#define ACCELERATION 5000               /** Reduction du temps entre chaque déplacement (en microsecondes) */
-#define X_INIT 40                       /** Position X initiale du serpent */
-#define Y_INIT 20                       /** Position Y initiale du serpent */
-#define TAILLE_PAVE 5                   /** Taille d'un obstacle carré sur le plateau. */
-#define NOMBRE_PAVE 5                   /** Nombre d'obstacles générés sur le plateau. */
-#define ESPACEMENT_PAVE_BORD_UN 2       /** Espace minimal entre les obstacles et les bordures. */
-#define ESPACEMENT_PAVE_BORD_DEUX 3     /** Espace maximal pour placer les obstacles. */
-#define ESPACEMENT_PAVE_SERPENT 3       /** Distance minimale entre les obstacles et le serpent. */
-#define BORD '#'                        /** Caractère représentant les bordures du plateau. */
-#define VIDE ' '                        /** Caractère représentant une case vide du plateau. */
-#define TETE 'O'                        /** Caractère représentant la tête du serpent */
-#define CORPS 'X'                       /** Caractère représentant le corps du serpent */
-#define POMME '6'                       /** Caractère représentant la pomme que le serpent doit manger */
+/**
+ * @brief Nombre de segments du serpent
+ */
+#define N 10                            
+
+/**
+ * @brief Taille maximale que le serpent peut atteindre
+ */
+#define TAILLE_MAX 20                   
+
+/**
+ * @brief Caractère pour arrêter le jeu
+ */
+#define ARRET 'a'                       
+
+/**
+ * @brief Valeur minimale des coordonnées
+ */
+#define MIN 1                           
+
+/**
+ * @brief Valeur maximale des coordonnées
+ */
+#define MAX 40                          
+
+/**
+ * @brief Largeur du plateau de jeu (nombre de colonnes).
+ */
+#define LARGEUR 80                      
+
+/**
+ * @brief Hauteur du plateau de jeu (nombre de lignes).
+ */
+#define HAUTEUR 40                      
+
+/**
+ * @brief Touche de déplacement haut
+ */
+#define HAUT 'z'                        
+
+/**
+ * @brief Touche de déplacement bas
+ */
+#define BAS 's'                            
+
+/**
+ * @brief Touche de déplacement gauche
+ */
+#define GAUCHE 'q'                      
+
+/**
+ * @brief Touche de déplacement droit
+ */
+#define DROITE 'd'                      
+
+/**
+ * @brief Temps entre chaque déplacement (en microsecondes)
+ */
+#define TEMPORISATION 100000            /** */
+
+/**
+ * @brief Reduction du temps entre chaque déplacement (en microsecondes)
+ */
+#define ACCELERATION 5000               
+
+/**
+ * @brief Position X initiale du serpent
+ */
+#define X_INIT 40                       
+
+/**
+ * @brief Position Y initiale du serpent
+ */
+#define Y_INIT 20                       
+
+/**
+ * @brief Taille d'un obstacle carré sur le plateau.
+ */
+#define TAILLE_PAVE 5                   
+
+/**
+ * @brief Nombre d'obstacles générés sur le plateau.
+ */
+#define NOMBRE_PAVE 5                   
+
+/**
+ * @brief Espace minimal entre les obstacles et les bordures
+ */
+#define ESPACEMENT_PAVE_BORD_UN 2       
+
+/**
+ * @brief Espace maximal pour placer les obstacles
+ */
+#define ESPACEMENT_PAVE_BORD_DEUX 3     
+
+/**
+ * @brief Distance minimale entre les obstacles et le serpent
+ */
+#define ESPACEMENT_PAVE_SERPENT 3       
+
+/**
+ * @brief Caractère représentant les bordures du plateau
+ */
+#define BORD '#'                        
+
+/**
+ * @brief Caractère représentant une case vide du plateau
+ */
+#define VIDE ' '                        
+
+/**
+ * @brief Caractère représentant la tête du serpent
+ */
+#define TETE 'O'                        
+
+/**
+ * @brief Caractère représentant le corps du serpent
+ */
+#define CORPS 'X'                       
+
+/**
+ * @brief Caractère représentant la pomme que le serpent doit manger
+ */
+#define POMME '6'                       
 
 /**
  * @brief Déplace le curseur à la position spécifiée dans la console.
@@ -118,12 +217,29 @@ void dessinePlateau(char tableau[HAUTEUR][LARGEUR]);
  */
 void ajouterPomme();
 
-char tableau[HAUTEUR][LARGEUR]; //Tableau à double entrées représentant le plateau de jeu
-int pommeX, pommeY;             // Position globale de la pomme
-int pommesMangees = 0;          // Nombre de pommes mangées
+/**
+ * @brief Variable globale servant à stocker les différents élements du plateau de jeu, sous la forme d'un tableau
+ */
+char tableau[HAUTEUR][LARGEUR];
 
+/**
+ * @brief Variable globale servant à stocker les coordonnées X et Y de la pomme
+ */
+int pommeX, pommeY;            
+
+/**
+ * @brief Variable globale servant à stocker le nombre de pommes mangées par le serpent
+ */
+int pommesMangees = 0;          
+
+/**
+ * @brief Variable globale servant à stocker les coordonées des éléments du serpent, sous la forme d'un tableau
+ */
 int positions[TAILLE_MAX][2];
 
+/**
+ * @brief Fonction principale du programme
+ */
 int main() {
     char pressed_car;
     char direction = DROITE;
