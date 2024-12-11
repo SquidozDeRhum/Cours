@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice Grid - 1</title>
+    <!-- Styles CSS -->
+    <style>
+        main {
+            display: grid;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 8em 30em 8em;
+            grid-template-areas: "header header aside"
+                                 "nav article aside"
+                                 "footer footer footer";
+        }
+
+        header,
+        article,
+        nav,
+        aside,
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        /* header {
+            grid-column: 1 / 3;
+        }
+
+        nav {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        article {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        aside {
+            grid-column: 3;
+            grid-row: 1 / 3;
+        }
+
+        footer {
+            grid-column: 1 / 4;
+            grid-row: 3;
+        } */
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        article {
+            grid-area: article;
+        }
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grille simple</h1>
+    <main>
+        <header>Entête</header>
+        <aside>Aside</aside>
+        <nav>Nav</nav>
+        <article>Article</article>
+        <footer>Footer</footer>
+    </main>
+</body>
+
+</html>
