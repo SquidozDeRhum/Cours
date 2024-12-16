@@ -6,13 +6,13 @@
 1. **Quelle instruction permet de visualiser le fichier créé par le pré-processeur ?**
    - L’instruction suivante permet de visualiser le fichier pré-traité :
      ```bash
-     gcc -E main_exo1.c -o main_exo1.i
+     gcc -E main_File_TD11_etu.c -o main_File_TD11_etu.i
      ```
 
 2. **Générer et visualiser le fichier créé par le pré-processeur.**
-   - Après exécution de la commande ci-dessus, ouvrez le fichier `main_exo1.i` avec un éditeur de texte ou affichez-le dans le terminal :
+   - Après exécution de la commande ci-dessus, ouvrez le fichier `main_File_TD11_etu.i` avec un éditeur de texte ou affichez-le dans le terminal :
      ```bash
-     cat main_exo1.i
+     cat main_File_TD11_etu.i
      ```
 
 ## Exercice 2 : Découpage du programme du TD11
