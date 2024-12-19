@@ -1,5 +1,5 @@
 default:
-	gcc -c globales.c -o globales.o
 	gcc -c fonctions.c -o fonctions.o
-	gcc main_file.c fonctions.o globales.o -o main
+	gcc -c main_file.c -o main.o
+	gcc main.o fonctions.o  -o main
 	./main

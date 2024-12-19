@@ -1,8 +1,7 @@
-#pragma once
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h> 
+#include "globales.h"
 #include "fonctions.h"
 
 // Definitions des fonctions
@@ -14,7 +13,7 @@ void afficheTous(t_file f){ // fonction secrete
 t_file initialiser() {
 	t_file f;
 	for (int i=0; i<MAX_MESSAGES; i++)
-		f.tabElt[i] = ELTVIDE; // tous les éléments de la file sont initialisés
+		f.tabElt[i] = ELTVIDES; // tous les éléments de la file sont initialisés
 	f.nb=0 ;
 	return f;
 }
@@ -36,18 +35,18 @@ t_element defiler(t_file *adrFile){
         for(int i=0 ; i< adrFile->nb-1; i++){
             adrFile->tabElt[i] = adrFile->tabElt[i+1];
         }
-        adrFile->tabElt[adrFile-> nb-1] = ELTVIDE;
+        adrFile->tabElt[adrFile-> nb-1] = ELTVIDES;
         adrFile-> nb--;
     }
     else{
-        elt = ELTVIDE;
+        elt = ELTVIDES;
     }
 	return elt;
 }
 
 void vider(t_file *adrFile){
 	while (adrFile->nb >0){
-		adrFile->tabElt[adrFile->nb-1] = ELTVIDE;
+		adrFile->tabElt[adrFile->nb-1] = ELTVIDES;
 		(adrFile->nb)-- ;
     }
 }

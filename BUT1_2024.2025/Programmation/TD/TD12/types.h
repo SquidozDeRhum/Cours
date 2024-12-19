@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TYPES_H
+#define TYPES_H
 
 #include "const.h"
 
@@ -11,3 +12,5 @@ typedef struct{
     t_element tabElt[MAX_MESSAGES];
     int nb;
 }t_file;
+
+#endif

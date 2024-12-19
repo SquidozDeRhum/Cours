@@ -1,8 +1,7 @@
-#pragma once
+#ifndef FONCTIONS_H
+#define FONCTIONS_H
 
-#include "const.h"
 #include "types.h"
-#include "globales.h"
 
 // prototypes des fonctions
 void afficheTous(t_file f); // fonction secrete
@@ -18,3 +17,5 @@ int estPleine(t_file p);
 void supprimer_trop_anciens(t_file *adrFile, int nb_a_supprimer);
 void sauvegardeFichier(t_file *adrfile, char nomFichier[]);
 void lectureFichier(t_file *adrFile, char nomFichier[]);
+
+#endif

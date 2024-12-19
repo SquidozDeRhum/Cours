@@ -3,7 +3,6 @@
 #include <string.h> 
 #include "const.h"
 #include "types.h"
-#include "globales.h"
 #include "fonctions.h"
 
 int main(){
