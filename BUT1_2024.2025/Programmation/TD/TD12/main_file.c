@@ -3,8 +3,8 @@
 #include <string.h> 
 #include "const.h"
 #include "types.h"
-#include "globales.h"
 #include "fonctions.h"
+#include "fonctions_date.h"
 
 int main(){
     // Declaration des variables
@@ -50,6 +50,7 @@ int main(){
                         fgets(msg, MAX_CAR, stdin); // saisie d'une chaine de caractères sécurisée
                         msg[strlen(msg)-1]='\0';
                         strcpy(elt.message,msg);
+                        date2str(time(NULL), elt.date);
                         enfiler(&maFile, elt);
                         break;
             case 3:     // retirer un element et afficher le message
@@ -58,6 +59,7 @@ int main(){
                         break;
             case 4:     // afficher le message de la tete de file
                         printf("tete de file %s\n", tete(maFile).message);
+                        printf("Date : %s\n", tete(maFile).date);
                         break; 
             case 5:     // vider la file
                         vider(&maFile);
