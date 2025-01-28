@@ -1,0 +1,8 @@
+repeat:
+    IN R0, 254
+    CMP R0, 2
+    BLT repeat
+    CMP R0, 254
+    BGT repeat
+    
+HLT

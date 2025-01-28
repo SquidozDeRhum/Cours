@@ -1,0 +1,21 @@
+LD R0, $54
+
+repeat:
+    IN R1, 10
+    CMP R1, R0
+    BLT lower
+    BGT greater
+    BRA end
+
+greater:
+    LD R1, 1
+    OUT R1, 10
+    BRA repeat
+    
+lower:
+    LD R1, -1
+    OUT R1, 10
+    BRA repeat
+
+end:
+    OUT R0, 10
