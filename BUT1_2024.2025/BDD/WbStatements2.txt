@@ -1,0 +1,24 @@
+##sqlwb.pos=331
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+CREATE TABLE fourniture (
+  quantite int NOT NULL,
+  noproduit char(3) NOT NULL,
+  nofour char(3) NOT NULL,
+  CONSTRAINT fourniture_pk PRIMARY KEY(noproduit, nofour),
+  CONSTRAINT fourniture_fk1 FOREIGN KEY(noproduit) REFERENCES produit(noproduit),
+  CONSTRAINT fourniture_fk2 FOREIGN KEY(nofour) REFERENCES fournisseur(nofour)
+ );
+----------- WbStatement -----------
+##sqlwb.pos=50
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+CREATE TABLE fourniture (
+  quantite int NOT NULL,
+  noproduit char(3) NOT NULL,
+  nofour char(3) NOT NULL,
+  CONSTRAINT fourniture_pk PRIMARY KEY(noproduit, nofour),
+  CONSTRAINT fourniture_fk1 FOREIGN KEY(noproduit) REFERENCES produit(noproduit),
+  CONSTRAINT fourniture_fk2 FOREIGN KEY(nofour) REFERENCES fournisseur(nofour)
+ );
+----------- WbStatement -----------

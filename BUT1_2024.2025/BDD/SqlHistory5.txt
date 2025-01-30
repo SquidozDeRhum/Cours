@@ -1,0 +1,15 @@
+ /*6*/\n\n(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
+ /*6*/\n\nSELECT nofour FROM fourniture WHERE noproduit != 'P6'
+ /*7*/\n\n(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
+ /*7*/\n\n((SELECT nofour FROM fourniture) JOIN (SELECT nofour FROM fournisseur)) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
+ /*7*/\n\n((SELECT nofour FROM fourniture) INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
+ /*7*/\n\n(SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
+ /*8*/\n\nSELECT nofour FROM fourniture, fournisseur
+ /*8*/\n\nSELECT nofour FROM fourniture\nINNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour
+ /*8*/\n\nSELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour
+ /*7*/\n\n(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
+ /*8*/\n\n(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
+ /*9*/\n\n(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'
+ /*9*/\n\n(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6')
+ /*10*/\n\nSELECT nofour FROM fourniture WHERE noproduit = 'P6' OR WHERE noproduit ='P4'
+ /*10*/\n\nSELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'

@@ -1,0 +1,5 @@
+INSERT INTO fourniture VALUES (2, 'P1', 'F1')
+\n\nINSERT INTO fourniture VALUES (2, 'P1', 'F12')
+\n\nINSERT INTO fournisseur VALUES ('F12', 'Jaaj' 'Feur')
+\n\nINSERT INTO fournisseur VALUES ('F12', 'Jaaj', 'Feur')
+\n\nINSERT INTO fourniture VALUES (2, 'P1', 'F12')
