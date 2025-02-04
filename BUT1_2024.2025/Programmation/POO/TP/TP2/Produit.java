@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Produit {
     private String ref;
-    private int date;
+    public int date;
     static private Scanner keyboard = new Scanner(System.in);
 
     public Produit(int date) {
@@ -12,7 +12,7 @@ public class Produit {
     }
 
     public String toString() {
-        return "Produit : " + this.ref + "\n" + "Date d'entrée : " + this.date + "\n";
+        return "Produit : " + this.ref + ", Date d'entrée : " + this.date;
     }
 
     public void afficher() {

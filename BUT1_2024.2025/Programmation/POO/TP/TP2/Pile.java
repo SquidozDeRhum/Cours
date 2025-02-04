@@ -23,6 +23,7 @@ public class Pile {
         if (!pilePleine()) {
             this.tabProd[this.indice] = p;
             this.indice++;
+            System.out.println(p.toString() + " ajouté au Stock");
         } else {
             System.out.println("Pile pleine ! ");
         }
@@ -30,6 +31,7 @@ public class Pile {
 
     public void depiler() {
         if (!pileVide()) {
+            System.out.println(this.sommet().toString() + " enlevé du stock");
             this.indice--;
         } else {
             System.out.println("La pile est vide !");
@@ -37,10 +39,9 @@ public class Pile {
     }
 
     public Produit sommet() {
-        Produit prod = null;
+        Produit prod = null;    
         if (!pileVide()) {
-            prod = this.tabProd[this.indice];
-            this.indice--;
+            prod = this.tabProd[this.indice - 1];
         } else {
             System.out.println("La pile est vide !");
         }
