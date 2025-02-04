@@ -1,3 +1,5 @@
+package EX1;
+
 public class Main {
     public static void main(String[] args) {
         Personne numero1 = new Personne("Joestar", "Joseph", "USA");
@@ -20,5 +22,18 @@ public class Main {
 
         System.out.println("Retrait de 50 compte 2");
         compte2.whithdraw(50.0);
+
+        Entreprise e1 = new Entreprise("Feur", numero2);
+
+        CompteEntreprise ce1 = new CompteEntreprise("101", e1);
+
+        ce1.afficher();
+
+        Banque b = new Banque("Crédit IUT");
+        b.addCompte(ce1);
+        b.addCompte(compte1);
+        b.afficher();
+        compte2.deposit(200);
+        b.afficher();
     }
 }

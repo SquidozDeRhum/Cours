@@ -1,3 +1,7 @@
+package EX1;
+
+import java.util.ArrayList;
+
 class Personne {
     private String nom, prenom, adresse;
 
@@ -96,11 +100,15 @@ class Entreprise {
     }
 
     public String toString() {
-        return "Nom : " + this.nom + "\n" + "Comptable : " + comptable.afficher();
+        return "Nom : " + this.nom + "\n" + "Comptable : " + comptable.toString();
     }
 
     public void afficher() {
         System.out.println(this.toString());
+    }
+
+    public Personne getComptable() {
+        return this.comptable;
     }
 }
 
@@ -108,12 +116,48 @@ class CompteEntreprise extends Compte {
 
     private Entreprise proprietaire;
 
-    public CompteEntreprise(String numero, Personne titulaire) {
-        super(numero, titulaire);
+    public CompteEntreprise(String numero, Entreprise ent) {
+        super(numero, ent.getComptable());
+        this.proprietaire = ent;
     }
 
     public String toString() {
-        return "Num : " + super.getNum() + "\n" + "Titulaire : " + super.getTitulaire() + "\n" + "Solde : " + super.getSolde();
+        return super.toString() + "\n" + "Titulaire : " + super.getTitulaire();
     }
 
+    public void afficher() {
+        System.out.println(this.toString());
+    }
+
+    public void mettreSoldeAZero() {
+        super.setSolde(0);
+    }
+
+}
+
+class Banque {
+    private String nom;
+    private ArrayList<Compte> lesComptes;
+
+    public Banque(String nom) {
+        this.nom = nom;
+        lesComptes = new ArrayList<Compte>(100);
+    }
+
+    public void addCompte(Compte compte) {
+        lesComptes.add(compte);
+    }
+
+    public void afficher() {
+        System.out.println(this.nom);
+        if (this.lesComptes.size() != 0) {
+            System.out.println("Liste des " + this.lesComptes.size() + " comptes");
+            for (int i = 0; i < this.lesComptes.size(); i++) {
+                System.out.println("-----------------");
+                lesComptes.get(i).afficher();
+            }
+        } else {
+            System.out.println("Cette banque n'a pas de comptes !");
+        }
+    }
 }
