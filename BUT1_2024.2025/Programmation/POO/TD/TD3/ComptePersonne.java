@@ -47,11 +47,11 @@ class Compte {
         return this.numero;
     }
 
-    public String getTitulaire() {
+    public Personne getTitulaire() {
         return this.titulaire;
     }
 
-    public double setSolde(double solde) {
+    public void setSolde(double solde) {
         this.solde = solde;
     }
 
