@@ -1,0 +1,39 @@
+##sqlwb.pos=47
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO fourniture VALUES (2, 'P1', 'F1') ;
+----------- WbStatement -----------
+##sqlwb.pos=92
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO fourniture VALUES (2, 'P1', 'F1') ;
+
+INSERT INTO fourniture VALUES (2, 'P1', 'F12') ;
+----------- WbStatement -----------
+##sqlwb.pos=103
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO fourniture VALUES (2, 'P1', 'F1') ;
+
+INSERT INTO fournisseur VALUES ('F12', 'Jaaj' 'Feur') ;
+
+INSERT INTO fourniture VALUES (2, 'P1', 'F12') ;
+----------- WbStatement -----------
+##sqlwb.pos=95
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO fourniture VALUES (2, 'P1', 'F1') ;
+
+INSERT INTO fournisseur VALUES ('F12', 'Jaaj', 'Feur') ;
+
+INSERT INTO fourniture VALUES (2, 'P1', 'F12') ;
+----------- WbStatement -----------
+##sqlwb.pos=137
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO fourniture VALUES (2, 'P1', 'F1') ;
+
+INSERT INTO fournisseur VALUES ('F12', 'Jaaj', 'Feur') ;
+
+INSERT INTO fourniture VALUES (2, 'P1', 'F12') ;
+----------- WbStatement -----------

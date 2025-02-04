@@ -1,0 +1,200 @@
+##sqlwb.pos=510
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture VALUES ('F1','P1',1);
+INSERT INTO fourniture VALUES ('F1','P4',1);
+INSERT INTO fourniture VALUES ('F1','P5',8);
+INSERT INTO fourniture VALUES ('F1','P6',2);
+INSERT INTO fourniture VALUES ('F2','P2',1);
+INSERT INTO fourniture VALUES ('F2','P4',1);
+INSERT INTO fourniture VALUES ('F3','P2',5);
+INSERT INTO fourniture VALUES ('F3','P4',1);
+INSERT INTO fourniture VALUES ('F4','P4',2);
+INSERT INTO fourniture VALUES ('F4','P5',7);
+INSERT INTO fourniture VALUES ('F4','P6',3);
+INSERT INTO fourniture VALUES ('F5','P3',10);
+----------- WbStatement -----------
+##sqlwb.pos=455
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture (quantite, noproduit, nofour) VALUES ('F1','P1',1);
+INSERT INTO fourniture VALUES ('F1','P4',1);
+INSERT INTO fourniture VALUES ('F1','P5',8);
+INSERT INTO fourniture VALUES ('F1','P6',2);
+INSERT INTO fourniture VALUES ('F2','P2',1);
+INSERT INTO fourniture VALUES ('F2','P4',1);
+INSERT INTO fourniture VALUES ('F3','P2',5);
+INSERT INTO fourniture VALUES ('F3','P4',1);
+INSERT INTO fourniture VALUES ('F4','P4',2);
+INSERT INTO fourniture VALUES ('F4','P5',7);
+INSERT INTO fourniture VALUES ('F4','P6',3);
+INSERT INTO fourniture VALUES ('F5','P3',10);
+----------- WbStatement -----------
+##sqlwb.pos=474
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture (quantite, noproduit, nofour) VALUES ('F1','P1',1);
+INSERT INTO fourniture VALUES ('F1','P4',1);
+INSERT INTO fourniture VALUES ('F1','P5',8);
+INSERT INTO fourniture VALUES ('F1','P6',2);
+INSERT INTO fourniture VALUES ('F2','P2',1);
+INSERT INTO fourniture VALUES ('F2','P4',1);
+INSERT INTO fourniture VALUES ('F3','P2',5);
+INSERT INTO fourniture VALUES ('F3','P4',1);
+INSERT INTO fourniture VALUES ('F4','P4',2);
+INSERT INTO fourniture VALUES ('F4','P5',7);
+INSERT INTO fourniture VALUES ('F4','P6',3);
+INSERT INTO fourniture VALUES ('F5','P3',10);
+----------- WbStatement -----------
+##sqlwb.pos=455
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture (quantite, noproduit, nofour) VALUES ('F1','P1',1);
+INSERT INTO fourniture VALUES ('F1','P4',1);
+INSERT INTO fourniture VALUES ('F1','P5',8);
+INSERT INTO fourniture VALUES ('F1','P6',2);
+INSERT INTO fourniture VALUES ('F2','P2',1);
+INSERT INTO fourniture VALUES ('F2','P4',1);
+INSERT INTO fourniture VALUES ('F3','P2',5);
+INSERT INTO fourniture VALUES ('F3','P4',1);
+INSERT INTO fourniture VALUES ('F4','P4',2);
+INSERT INTO fourniture VALUES ('F4','P5',7);
+INSERT INTO fourniture VALUES ('F4','P6',3);
+INSERT INTO fourniture VALUES ('F5','P3',10);
+----------- WbStatement -----------
+##sqlwb.pos=447
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture (quantite, noproduit, nofour) VALUES ('F1','P1',1);
+INSERT INTO fourniture VALUES ('F1','P4',1);
+INSERT INTO fourniture VALUES ('F1','P5',8);
+INSERT INTO fourniture VALUES ('F1','P6',2);
+INSERT INTO fourniture VALUES ('F2','P2',1);
+INSERT INTO fourniture VALUES ('F2','P4',1);
+INSERT INTO fourniture VALUES ('F3','P2',5);
+INSERT INTO fourniture VALUES ('F3','P4',1);
+INSERT INTO fourniture VALUES ('F4','P4',2);
+INSERT INTO fourniture VALUES ('F4','P5',7);
+INSERT INTO fourniture VALUES ('F4','P6',3);
+INSERT INTO fourniture VALUES ('F5','P3',10);
+----------- WbStatement -----------
+##sqlwb.pos=472
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P1',1);
+INSERT INTO fourniture VALUES ('F1','P4',1);
+INSERT INTO fourniture VALUES ('F1','P5',8);
+INSERT INTO fourniture VALUES ('F1','P6',2);
+INSERT INTO fourniture VALUES ('F2','P2',1);
+INSERT INTO fourniture VALUES ('F2','P4',1);
+INSERT INTO fourniture VALUES ('F3','P2',5);
+INSERT INTO fourniture VALUES ('F3','P4',1);
+INSERT INTO fourniture VALUES ('F4','P4',2);
+INSERT INTO fourniture VALUES ('F4','P5',7);
+INSERT INTO fourniture VALUES ('F4','P6',3);
+INSERT INTO fourniture VALUES ('F5','P3',10);
+----------- WbStatement -----------
+##sqlwb.pos=1550
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit (noproduit, origine, couleur, nomp) VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit (noproduit, origine, couleur, nomp) VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit (noproduit, origine, couleur, nomp) VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit (noproduit, origine, couleur, nomp) VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit (noproduit, origine, couleur, nomp) VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit (noproduit, origine, couleur, nomp) VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit (noproduit, origine, couleur, nomp) VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P1',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P4',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P5',8);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P6',2);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F2','P2',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F2','P4',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F3','P2',5);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F3','P4',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F4','P4',2);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F4','P5',7);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F4','P6',3);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F5','P3',10);
+----------- WbStatement -----------
+##sqlwb.pos=510
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+INSERT INTO produit (noproduit, nomp, couleur, origine) VALUES('P1','Cassis','Rouge','Dijon');
+INSERT INTO produit (noproduit, nomp, couleur, origine) VALUES('P2','Champagne','Blanc','Reims');
+INSERT INTO produit (noproduit, nomp, couleur, origine) VALUES('P3','Huitre','Vert','Riec');
+INSERT INTO produit (noproduit, nomp, couleur, origine) VALUES('P4','Moutarde','Jaune','Dijon');
+INSERT INTO produit (noproduit, nomp, couleur, origine) VALUES('P5','Salade','Vert','Nice');
+INSERT INTO produit (noproduit, nomp, couleur, origine) VALUES('P6','Cornichon','Vert','Dijon');
+INSERT INTO produit (noproduit, nomp, couleur, origine) VALUES('P7','Muscadet','Blanc','Nantes');
+
+
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P1',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P4',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P5',8);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F1','P6',2);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F2','P2',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F2','P4',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F3','P2',5);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F3','P4',1);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F4','P4',2);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F4','P5',7);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F4','P6',3);
+INSERT INTO fourniture (nofour, noproduit, quantite) VALUES ('F5','P3',10);
+----------- WbStatement -----------
