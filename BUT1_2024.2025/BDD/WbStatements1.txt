@@ -1,0 +1,256 @@
+##sqlwb.pos=73
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=45
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=101
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=131
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE produit ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=154
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=118
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=93
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=145
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=126
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=137
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE frouniture, produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=129
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE fourniture, produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=100
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE fourniture, produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=103
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE fourniture, produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=68
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE fourniture, produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------
+##sqlwb.pos=4
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SET schema 'distribill' ;
+
+SELECT * FROM fournisseur ;
+
+SELECT * FROM  fourniture ;
+
+SELECT * FROM produit ;
+
+TRUNCATE TABLE fourniture, produit ;
+
+TRUNCATE fourniture ;
+
+SELECT SUM(quantite) FROM fourniture ;
+
+----------- WbStatement -----------

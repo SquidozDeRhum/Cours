@@ -1,0 +1,1 @@
+CREATE TABLE fourniture (\n  quantite int NOT NULL,\n  noproduit char(3) NOT NULL,\n  nofour char(3) NOT NULL,\n  CONSTRAINT fourniture_pk PRIMARY KEY(noproduit, nofour),\n  CONSTRAINT fourniture_fk1 FOREIGN KEY(noproduit) REFERENCES produit(noproduit),\n  CONSTRAINT fourniture_fk2 FOREIGN KEY(nofour) REFERENCES fournisseur(nofour)\n )
