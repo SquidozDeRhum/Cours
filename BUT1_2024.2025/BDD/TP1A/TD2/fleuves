@@ -1,0 +1,8 @@
+create schema fleuves;
+
+set schema 'fleuves';
+
+create table mer (
+  nom_m char(20) not null,
+  surface int,
+  constraint mer_pk primary key(nom_m));

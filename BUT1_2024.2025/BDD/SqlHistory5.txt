@@ -1,15 +1,15 @@
- /*6*/\n\n(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
- /*6*/\n\nSELECT nofour FROM fourniture WHERE noproduit != 'P6'
- /*7*/\n\n(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
- /*7*/\n\n((SELECT nofour FROM fourniture) JOIN (SELECT nofour FROM fournisseur)) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
- /*7*/\n\n((SELECT nofour FROM fourniture) INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
- /*7*/\n\n(SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
- /*8*/\n\nSELECT nofour FROM fourniture, fournisseur
- /*8*/\n\nSELECT nofour FROM fourniture\nINNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour
- /*8*/\n\nSELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour
- /*7*/\n\n(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
- /*8*/\n\n(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6')
- /*9*/\n\n(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'
- /*9*/\n\n(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6')
- /*10*/\n\nSELECT nofour FROM fourniture WHERE noproduit = 'P6' OR WHERE noproduit ='P4'
- /*10*/\n\nSELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'
+\n\nSelect fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) = 2
+\n\nSelect fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2
+\n\nselect fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'
+\n\nselect distinct fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'
+\n\nselect nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'
+\n\nselect fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert' GROUP BY fournisseur.nofour, fournisseur.nomf HAVING COUNT(DISTINCT couleur) = 1
+\n\nselect fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur = 'Vert' GROUP BY fournisseur.nofour, fournisseur.nomf HAVING COUNT(DISTINCT couleur) = 1
+\n\nselect distinct fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur = 'Vert' GROUP BY fournisseur.nofour, fournisseur.nomf HAVING COUNT(DISTINCT couleur) = 1
+\n\nSELECT nofour, nomf\nFROM fournisseur\nWHERE nofour NOT IN (\n    SELECT DISTINCT nofour\n    FROM fourniture\n    natural join produit\n    WHERE produit.couleur != 'vert'\n)
+ /*22*/\n\nSELECT nofour, nomf\nFROM fournisseur\nWHERE nofour NOT IN (\n    SELECT DISTINCT nofour\n    FROM fourniture\n    natural join produit\n    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'\n)
+\n\nSELECT DISTINCT nofour\n    FROM fourniture\n    natural join produit\n    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'
+\n\nSELECT DISTINCT *\n    FROM fourniture\n    natural join produit\n    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'
+\n\nSELECT DISTINCT *\n    FROM fourniture\n    natural join produit\n    WHERE produit.couleur != 'Vert' and produit.couleur != 'Jaune'
+ /*22*/\n\nSELECT nofour, nomf\nFROM fournisseur\nWHERE nofour NOT IN (\n    SELECT DISTINCT nofour\n    FROM fourniture\n    natural join produit\n    WHERE produit.couleur != 'Vert' and produit.couleur != 'Jaune'\n)
+ /*19*/\n\nSelect fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2

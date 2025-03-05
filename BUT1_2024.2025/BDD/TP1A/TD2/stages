@@ -1,0 +1,30 @@
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+  
+create table stages (
+  no_stage int not null,
+  niveau_stage int not null,
+  nom_centre varchar(20) not null,
+  constraint stages_pk primary key(no_stage),
+  constraint stages_fk1 foreign key(nom_centre) references centres(nom_centre));
+  
+create table clients (
+  no_client int not null,
+  nom varchar(20) not null,
+  prenom varchar(20) not null,
+  adresse varchar(50) not null,
+  code_postal int not null,
+  ville varchar(20) not null,
+  tel_client int not null,
+  constraint clients_pk primary key(no_client));
+  
+create table inscriptions (
+  no_stage int not null,
+  no_client int not null,
+  date_inscription date,
+  constraint inscriptions_pk primary key(no_stage, no_client),
+  constraint inscriptions_fk1 foreign key(no_stage) references stages(no_stage),
+  constraint inscriptions_fk2 foreign key(no_client) references clients(no_client));

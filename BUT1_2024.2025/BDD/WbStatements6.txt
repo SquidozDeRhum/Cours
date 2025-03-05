@@ -1,0 +1,375 @@
+##sqlwb.pos=976
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour;
+----------- WbStatement -----------
+##sqlwb.pos=977
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture HAVING MAX(jeej) GROUP BY nofour;
+----------- WbStatement -----------
+##sqlwb.pos=977
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=974
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour as jeej from fourniture GROUP BY nofour HAVING MAX(noproduit) = count(distinct noproduit);
+----------- WbStatement -----------
+##sqlwb.pos=994
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=916
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=824
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=936
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=843
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=150
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=967
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej);
+----------- WbStatement -----------
+##sqlwb.pos=920
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, MAX(jeej) count(distinct noproduit) as jeej from fourniture GROUP BY nofour;
+----------- WbStatement -----------
+##sqlwb.pos=921
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, MAX(jeej), count(distinct noproduit) as jeej from fourniture GROUP BY nofour;
+----------- WbStatement -----------
+##sqlwb.pos=915
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, MAX(jeej), count(distinct noproduit) as jeej from fourniture GROUP BY nofour;
+----------- WbStatement -----------
+##sqlwb.pos=911
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+/*TD 1 BIS*/
+
+select nofour, COUNT(distinct (noproduit)) as jeej from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour;
+
+select nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture NATURAL JOIN produit where couleur = 'Vert' group by nofour;
+
+select nofour from fourniture GROUP by nofour HAVING COUNT(distinct noproduit) >= 2;
+
+select couleur, avg(quantite) from fourniture natural join produit group by couleur;
+
+select nomf, max(quantite) from fourniture natural join fournisseur group by nomf;
+
+select nofour from fourniture GROUP BY nofour HAVING SUM(quantite) > 10;
+
+select nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp;
+
+select couleur, count(distinct nofour) from produit natural join fourniture group by couleur;
+
+select nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour;
+----------- WbStatement -----------

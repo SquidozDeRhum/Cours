@@ -1,287 +1,4 @@
-##sqlwb.pos=391
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
- /*9*/
------------ WbStatement -----------
-##sqlwb.pos=425
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-((SELECT nofour FROM fourniture) JOIN (SELECT nofour FROM fournisseur)) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
- /*9*/
------------ WbStatement -----------
-##sqlwb.pos=471
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-((SELECT nofour FROM fourniture) INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
- /*9*/
------------ WbStatement -----------
-##sqlwb.pos=391
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
- /*9*/
------------ WbStatement -----------
-##sqlwb.pos=599
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-SELECT nofour FROM fourniture, fournisseur; /*9*/
------------ WbStatement -----------
-##sqlwb.pos=651
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-SELECT nofour FROM fourniture
-INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour; /*9*/
------------ WbStatement -----------
-##sqlwb.pos=572
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-SELECT nofour FROM fourniture
-INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour; /*9*/
------------ WbStatement -----------
-##sqlwb.pos=574
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-SELECT nofour FROM fourniture INNER JOIN fournisseur ON fourniture.nofour = fournisseur.nofour; /*9*/
------------ WbStatement -----------
-##sqlwb.pos=421
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
- /*9*/
------------ WbStatement -----------
-##sqlwb.pos=523
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
------------ WbStatement -----------
-##sqlwb.pos=679
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
-
-(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6';);/*10*/
------------ WbStatement -----------
-##sqlwb.pos=685
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
-
-(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6');/*10*/
------------ WbStatement -----------
-##sqlwb.pos=799
-##sqlwb.selStart=0
-##sqlwb.selEnd=0
-SELECT nomp FROM produit ; /*1*/
-
-SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
-
-SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
-
-SELECT nofour FROM fourniture ; /*4*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
-
-SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
-
-(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
-
-(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
-
-(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
-
-SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR WHERE noproduit ='P4'; /*11*/
------------ WbStatement -----------
-##sqlwb.pos=778
+##sqlwb.pos=2214
 ##sqlwb.selStart=0
 ##sqlwb.selEnd=0
 SELECT nomp FROM produit ; /*1*/
@@ -305,8 +22,28 @@ SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
 (SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
 
 SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp;
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade');
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge';
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2;
+
+select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert';
 ----------- WbStatement -----------
-##sqlwb.pos=760
+##sqlwb.pos=2103
 ##sqlwb.selStart=0
 ##sqlwb.selEnd=0
 SELECT nomp FROM produit ; /*1*/
@@ -330,4 +67,798 @@ SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
 (SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
 
 SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp;
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade');
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge';
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2;
+
+select distinct fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert';
+----------- WbStatement -----------
+##sqlwb.pos=2108
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp;
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade');
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge';
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2;
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert';
+----------- WbStatement -----------
+##sqlwb.pos=2470
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp;
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade');
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge';
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2;
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert';
+
+select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert' GROUP BY fournisseur.nofour, fournisseur.nomf HAVING COUNT(DISTINCT couleur) = 1;
+----------- WbStatement -----------
+##sqlwb.pos=2383
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp;
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade');
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge';
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2;
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert';
+
+select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur = 'Vert' GROUP BY fournisseur.nofour, fournisseur.nomf HAVING COUNT(DISTINCT couleur) = 1;
+----------- WbStatement -----------
+##sqlwb.pos=2278
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp;
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade');
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge';
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2;
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert';
+
+select distinct fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur = 'Vert' GROUP BY fournisseur.nofour, fournisseur.nomf HAVING COUNT(DISTINCT couleur) = 1;
+----------- WbStatement -----------
+##sqlwb.pos=2569
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp;
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade');
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge';
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2;
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert';
+
+select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur = 'Vert' GROUP BY fournisseur.nofour, fournisseur.nomf HAVING COUNT(DISTINCT couleur) = 1;
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+);
+----------- WbStatement -----------
+##sqlwb.pos=2668
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'
+);
+----------- WbStatement -----------
+##sqlwb.pos=2549
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'
+);
+----------- WbStatement -----------
+##sqlwb.pos=2810
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'
+);
+
+SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune';
+----------- WbStatement -----------
+##sqlwb.pos=2695
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'
+);
+
+SELECT DISTINCT *
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune';
+----------- WbStatement -----------
+##sqlwb.pos=2780
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' or produit.couleur != 'Jaune'
+);
+
+SELECT DISTINCT *
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' and produit.couleur != 'Jaune';
+----------- WbStatement -----------
+##sqlwb.pos=2647
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' and produit.couleur != 'Jaune'
+);
+
+SELECT DISTINCT *
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' and produit.couleur != 'Jaune';
+----------- WbStatement -----------
+##sqlwb.pos=2081
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' and produit.couleur != 'Jaune'
+); /*23*/
+----------- WbStatement -----------
+##sqlwb.pos=2084
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+SELECT nomp FROM produit ; /*1*/
+
+SELECT * FROM produit WHERE origine = 'Dijon' ; /*2*/
+
+SELECT nomp FROM produit WHERE origine = 'Dijon' ; /*3*/
+
+SELECT nofour FROM fourniture ; /*4*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture) ; /*5*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6'; /*6*/
+
+SELECT nofour FROM fourniture WHERE noproduit != 'P6'; /*7*/
+
+(SELECT nofour FROM fournisseur) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*8*/
+
+(SELECT nofour FROM fourniture) EXCEPT (SELECT nofour FROM fourniture WHERE noproduit = 'P6'); /*9*/
+
+(SELECT nofour FROM fourniture WHERE noproduit = 'P6') EXCEPT (SELECT nofour FROM fourniture WHERE noproduit != 'P6'); /*10*/
+
+SELECT nofour FROM fourniture WHERE noproduit = 'P6' OR noproduit ='P4'; /*11*/
+
+SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2; /*12*/
+
+SELECT nofour from fourniture except (SELECT nofour from fourniture where noproduit IN ('P4', 'P6') GROUP BY nofour HAVING COUNT(DISTINCT noproduit) = 2); /*13*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur where noproduit = 'P6'; /*14*/
+
+SELECT nofour, fournisseur.nomf from fourniture NATURAL JOIN fournisseur except (SELECT nofour, fournisseur.nomf from fourniture natural join fournisseur where noproduit IN ('P4', 'P6') GROUP BY nofour, fournisseur.nomf HAVING COUNT(DISTINCT noproduit) = 2); /*15*/
+
+SELECT fournisseur.nofour, fournisseur.nomf, fournisseur.ville from fournisseur NATURAL JOIN fourniture NATURAL JOIN produit where origine = ville; /*16*/
+
+SELECT p1.nomp, p2.nomp FROM produit p1 JOIN produit p2 ON p1.couleur = p2.couleur AND p1.nomp < p2.nomp; /*17*/
+
+select * from produit where couleur = (select couleur from produit where nomp = 'Salade'); /*18*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur = 'Vert' or couleur = 'Rouge'; /*19*/
+
+Select fourniture.nofour from fourniture NATURAL JOIN produit where couleur in ('Vert', 'Rouge') GROUP BY fourniture.nofour HAVING COUNT(DISTINCT couleur) >= 2; /*20*/
+
+select nofour, nomf from fournisseur except select fournisseur.nofour, fournisseur.nomf from fournisseur natural join fourniture natural join produit where couleur != 'Vert'; /*21*/
+
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'vert'
+); /*22*/
+
+SELECT nofour, nomf
+FROM fournisseur
+WHERE nofour NOT IN (
+    SELECT DISTINCT nofour
+    FROM fourniture
+    natural join produit
+    WHERE produit.couleur != 'Vert' and produit.couleur != 'Jaune'
+); /*23*/
 ----------- WbStatement -----------

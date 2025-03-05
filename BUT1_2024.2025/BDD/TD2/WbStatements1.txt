@@ -1,0 +1,46 @@
+##sqlwb.pos=18
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create schema 'TD2';
+----------- WbStatement -----------
+##sqlwb.pos=17
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create schema TD2;
+----------- WbStatement -----------
+##sqlwb.pos=3
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+set schema TD2;
+----------- WbStatement -----------
+##sqlwb.pos=16
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+set schema 'TD2';
+----------- WbStatement -----------
+##sqlwb.pos=7
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+set schema 'TD2';
+----------- WbStatement -----------
+##sqlwb.pos=54
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+set schema 'TD2';
+
+revoke usage on schema TD2 from TD2;
+----------- WbStatement -----------
+##sqlwb.pos=48
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+set schema 'TD2';
+
+revoke usage on schema public from TD2;
+----------- WbStatement -----------
+##sqlwb.pos=57
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+set schema 'TD2';
+
+revoke usage on schema TD2 from public;
+----------- WbStatement -----------

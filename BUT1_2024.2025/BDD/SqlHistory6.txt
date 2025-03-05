@@ -1,0 +1,15 @@
+\n\nselect nomp, min(quantite) from produit natural join fourniture where origine = 'Dijon' GROUP BY nomp
+\n\nselect couleur, count(distinct nofour) from produit natural join fourniture group by couleur
+\n\nselect nofour, count(distinct noproduit) as jeej from fourniture
+\n\nselect nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour
+\n\nselect nofour, count(distinct noproduit) as jeej from fourniture HAVING MAX(jeej) GROUP BY nofour
+\n\nselect nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej)
+\n\nselect nofour as jeej from fourniture GROUP BY nofour HAVING MAX(noproduit) = count(distinct noproduit)
+\n\nselect nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej)
+\n\nselect couleur, count(distinct nofour) from produit natural join fourniture group by couleur
+\n\nselect nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej)
+\n\nselect couleur, count(distinct nofour) from produit natural join fourniture group by couleur
+\n\nselect nofour, COUNT(distinct (noproduit)) as Dif, COUNT(noproduit) as Global from fourniture GROUP BY nofour
+\n\nselect nofour, count(distinct noproduit) as jeej from fourniture GROUP BY nofour HAVING MAX(jeej)
+\n\nselect nofour, MAX(jeej) count(distinct noproduit) as jeej from fourniture GROUP BY nofour
+\n\nselect nofour, MAX(jeej), count(distinct noproduit) as jeej from fourniture GROUP BY nofour

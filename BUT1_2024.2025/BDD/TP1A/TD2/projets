@@ -1,0 +1,41 @@
+create schema projets;
+
+set schema 'projets';
+
+create table fournisseur (
+  no_fournisseur int not null,
+  nom varchar(20) not null,
+  ville varchar(20) not null,
+  budget int not null,
+  constraint fournisseur_pk primary key(no_fournisseur));
+  
+create table projet (
+  no_projet int not null,
+  nom_projet varchar(20) not null,
+  budget_porjet int not null,
+  ville_projet varchar(20) not null,
+  constraint projet_pk primary key(no_projet));
+  
+create table article (
+  no_article int not null,
+  nom_article varchar(20) not null,
+  couleur varchar(20),
+  prix int,
+  constraint article_pk primary key(no_article));
+  
+create table nomenclature (
+  composant int not null,
+  compose int not null,
+  constraint nomenclature_pk primary key(composant, compose),
+  constraint nomenclature_fk1 foreign key(composant) references article(no_article),
+  constraint nomenclature_fk2 foreign key(compose) references article(no_article));
+  
+create table dotation (
+  no_fournisseur int not null,
+  no_projet int not null,
+  no_article int not null,
+  quantite_dot int,
+  constraint dotation_pk primary key(no_fournisseur, no_projet, no_article),
+  constraint dotation_fk1 foreign key(no_fournisseur) references fournisseur(no_fournisseur),
+  constraint dotation_fk2 foreign key(no_projet) references projet(no_projet),
+  constraint dotation_fk3 foreign key(no_article) references article(no_article));
