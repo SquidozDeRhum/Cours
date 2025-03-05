@@ -1,0 +1,4 @@
+set schema 'TD2'
+\n\nrevoke usage on schema TD2 from TD2
+\n\nrevoke usage on schema public from TD2
+\n\nrevoke usage on schema TD2 from public

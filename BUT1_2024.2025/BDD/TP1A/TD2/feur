@@ -1,0 +1,5 @@
+set schema 'TD2';
+
+revoke usage on schema TD2 from public;
+
+drop schema TD2 CASCADE;

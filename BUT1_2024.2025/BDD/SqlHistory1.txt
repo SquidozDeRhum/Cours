@@ -1,15 +1,15 @@
+\n\nSELECT * FROM  fourniture
+\n\nSELECT * *FROM fournisseur
 \n\nSELECT * FROM fournisseur
+\n\nSELECT * FROM  fourniture
+\n\nSELECT * FROM produit
 \n\nSELECT * FROM  fourniture
 \n\nSELECT * FROM fournisseur
 \n\nSELECT * FROM produit
-\n\nTRUNCATE TABLE produit
-\n\nTRUNCATE fourniture
-\n\nTRUNCATE TABLE produit
-\n\nSELECT * FROM produit
-\n\nTRUNCATE fourniture
-\n\nTRUNCATE TABLE produit
-\n\nTRUNCATE TABLE frouniture, produit
-\n\nTRUNCATE TABLE fourniture, produit
+\n\nSELECT * FROM  fourniture
 \n\nSELECT * FROM produit
 \n\nSELECT * FROM  fourniture
+\n\nselect * from fournisseur natural join fourniture natural join produit
+\n\nSELECT * FROM  fourniture
+\n\nselect * from fournisseur natural join fourniture natural join produit
 SET schema 'distribill'

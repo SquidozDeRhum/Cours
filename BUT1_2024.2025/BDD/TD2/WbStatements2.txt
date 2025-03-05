@@ -1,0 +1,81 @@
+##sqlwb.pos=152
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres
+  nom_centre      varchar(20),
+  capacite_centre int,
+  nom_pays        varchar(20),
+  constraint centres_pk primary key(nom_centre);
+----------- WbStatement -----------
+##sqlwb.pos=133
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
+##sqlwb.pos=85
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
+##sqlwb.pos=13
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
+##sqlwb.pos=75
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
+##sqlwb.pos=46
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
+##sqlwb.pos=77
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
+##sqlwb.pos=13
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
+##sqlwb.pos=185
+##sqlwb.selStart=0
+##sqlwb.selEnd=0
+create table centres (
+  nom_centre      varchar(20) not null,
+  capacite_centre int not null,
+  nom_pays        varchar(20) not null,
+  constraint centres_pk primary key(nom_centre));
+----------- WbStatement -----------
