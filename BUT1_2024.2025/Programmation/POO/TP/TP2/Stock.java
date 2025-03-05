@@ -15,7 +15,8 @@ public class Stock {
     }
 
     public void sortir(int dateJ) {
-        if (this.pile.sommet().date + 5 < dateJ) {
+        
+        if (!this.pile.pileVide() && this.pile.sommet().date + 5 < dateJ) {
             System.out.println("Produit périmé, sortie de tout le stock");
             while (!this.pile.pileVide()) {
                 this.pile.depiler();

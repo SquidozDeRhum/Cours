@@ -2,7 +2,7 @@ import mygraph as gr
 import math
 from time import sleep
 
-graphe =   {"A" :{"C"},
+graphe =   {"A" : {"C"},
             "B" : {"C", "E"},
             "C" : {"A", "B", "D", "E"},
             "D" : {"C"},
@@ -50,5 +50,5 @@ def DFS(sommet:str, graphe:gr.Graphe) -> tuple:
                 T[w] = v
     return (D, T)
 
-print(BFS("A", g2)[0])
-print(DFS("A", g2)[0])
+print(BFS("A", g2))
+print(DFS("A", g2))

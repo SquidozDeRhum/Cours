@@ -23,8 +23,10 @@ def dp(A, B):
         feur.append(distance)
     return max(feur)
 
-def kkk(courant, data, k):
-    for i data:
-        distance = dp(courant[1], data[i][1])
-
-print(kkk(3, 2, 1))
+def knn(search:tuple, data:list, k:int) -> list:
+    feur = list()
+    for i in data:
+        distance = dp(search[1], data[i][1])
+        feur.append((data[i][0]), distance)
+    feur.sort(key=lambda x: x[1])
+    return feur[:k]
